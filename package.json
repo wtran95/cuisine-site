@@ -1,0 +1,14 @@
+{
+  "name": "food-project",
+  "version": "1.0.0",
+  "description": "Food Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Tran",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}

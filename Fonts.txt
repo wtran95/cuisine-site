@@ -1,0 +1,70 @@
+INSPIRED WORD : Miniver 
+DESCRIPTION PARAGRAPH: Josefin Sans ( Thin Light)
+HEADER WORD: Caviar Dreams Bold
+
+******************** NAV BAR ********************
+
+MAIN
+	Open San Condensed(Light)
+TIER1 + TIER 2
+	DESCRIPTION PARAGRAPH
+
+
+******************** SLIDE PICTURE ********************
+
+INSPIRED WORD
+Metropolis1920 (not include GOOGLE FONT)
+DESCRIPTION PARAGRAPH
+
+
+******************** ABOUT US ********************
+
+INSPIRED WORD
+HEADER WORD
+DESCRIPTION PARAGRAPH
+
+******************** ICONIC PICTURE ********************
+
+QUOTE
+	INSPIRED WORD
+Name: Caviar Dreams Bold
+DESCRIPTION PARAGRAPH
+
+
+******************** MENU TITLE ********************
+
+INSPIRED WORD
+HEADER WORD
+
+********************  MENU LIST PRICE ********************
+
+HEADER WORD
+DESCRIPTION PARAGRAPH
+
+******************** OUR TIPS ********************
+
+INSPIRED WORD
+HEADER WORD
+DESCRIPTION PARAGRAPH
+
+
+******************** OUR MENU TITLE ********************
+
+INSPIRED WORD
+HEADER WORD
+
+
+********************  MENU MEAL ORDER ********************
+
+HEADER WORD
+DESCRIPTION PARAGRAPH
+
+******************** BOOK A TABLE ********************
+
+INSPIRED WORD
+DESCRIPTION PARAGRAPH
+
+ ******************** FOOTER ********************
+
+DESCRIPTION PARAGRAPH
+
