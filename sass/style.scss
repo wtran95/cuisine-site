@@ -1,5 +1,5 @@
 //Custom
-@import "/sass/customVariables";
+@import "./customVariables";
 
 // Required
 @import "../node_modules/bootstrap/scss/functions";
@@ -16,6 +16,5 @@
 @import "../node_modules/bootstrap/scss/forms";
 @import "../node_modules/bootstrap/scss/carousel";
 
-@import "/sass/custom";
-
+@import "./custom";
 

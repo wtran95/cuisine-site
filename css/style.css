@@ -7353,8 +7353,23 @@ textarea.form-control {
   text-align: center;
 }
 
+@font-face {
+  font-family: "Caviar Dreams Bold";
+  src: url(/fonts/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+  font-family: "Metropolis1920";
+  src: url(/fonts/Metropolis1920-Regular.ttf);
+}
+
 body {
   background-color: #0b1315;
+  color: white;
+}
+
+.dropdown {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -7366,9 +7381,148 @@ body {
   left: 100%;
   top: 0;
   display: none;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .dropdown:hover > .submenu {
   display: block;
+}
+
+#about {
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+span.inspired {
+  font-family: "Miniver", cursive;
+}
+
+.header-font {
+  font-family: "Caviar Dreams Bold";
+}
+
+.description {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#iconic-pic {
+  margin: 0;
+  padding: 0;
+}
+
+#iconic-pic > div > img {
+  max-width: 100%;
+}
+
+#rating {
+  margin: 50px 0px;
+}
+
+#rating > div {
+  padding: 0;
+}
+
+#rating > div > img {
+  max-width: 100%;
+}
+
+#quote {
+  background-color: #0f1d22;
+  max-width: 100%;
+}
+
+#quote > p {
+  font-size: 5rem;
+  margin: 50px 0px 0px 0px;
+}
+
+#slideshow-container {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#num-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.num {
+  cursor: pointer;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.active, .num:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#recommendation {
+  margin-bottom: 50px;
+}
+
+#recommendation > div {
+  margin: 0;
+  padding: 0;
+}
+
+#recommendation > div > img {
+  max-width: 100%;
+}
+
+#r-content h2, p {
+  text-align: center;
+}
+
+#r-content button {
+  background-color: #0b1315;
+  height: 50px;
+  width: 150px;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  border: solid 1px #bbbb25;
+}
+
+#menu-title {
+  text-align: center;
+}
+
+.menu {
+  background-color: #0f1d22;
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+.menu > button {
+  background-color: #0b1315;
+  height: 50px;
+  width: 150px;
+  color: #fff;
+  display: block;
+  margin: 35px auto;
+  border: solid 1px #bbbb25;
+}
+
+.pricing-item {
+  margin: 10px 0px 10px 20px;
+}
+
+.pricing-main {
+  margin: 5px auto;
+}
+
+.pricing-main > h6 {
+  display: inline-block;
+}
+
+.pricing-price {
+  float: right;
+}
+
+.pricing-desc > p {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,12 +9,18 @@
     src: url(/fonts/Metropolis1920-Regular.ttf);
 }
 
+
+// ******************** BODY********************
 body {
-    background-color: $theme-color;
+    background-color: $primary-theme-color;
+    color: white;
 }
 
+
+// ******************** NAV BAR ********************
+
 .dropdown {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: $description-font;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -26,9 +32,162 @@ body {
     left: 100%;
     top: 0;
     display: none;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: $description-font;
 }
 
 .dropdown:hover > .submenu {
     display: block;
+}
+
+// ******************** ABOUT US ********************
+
+#about {
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+span.inspired {
+    font-family: $inspired-font;
+}
+
+.header-font {
+    font-family: $header-font;
+}
+
+.description{
+    font-family: $description-font;
+}
+
+// ******************** ICONIC PICTURE ********************
+
+
+#iconic-pic {
+    margin: 0;
+    padding: 0;
+}
+
+#iconic-pic > div > img {
+    max-width: 100%;
+}
+
+// ******************** RATING ********************
+
+#rating {
+    margin: 50px 0px;
+}
+
+#rating > div {
+    padding: 0;
+}
+
+#rating > div > img {
+    max-width: 100%;
+}
+
+#quote {
+    background-color: $secondary-theme-color;
+    max-width: 100%;
+}
+
+#quote > p {
+    font-size: 5rem;
+    margin: 50px 0px 0px 0px ;
+}
+
+// SLIDE SHOW
+
+#slideshow-container {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#num-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.num {
+    cursor: pointer;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.active, .num:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+// ******************** RECOMMENDATION (DECOR) ********************
+
+#recommendation {
+    margin-bottom: 50px;
+}
+
+#recommendation > div {
+    margin: 0;
+    padding: 0;
+}
+
+#recommendation > div > img {
+    max-width: 100%;
+}
+
+#r-content h2, p{
+    text-align: center;
+}
+#r-content button {
+    background-color: $primary-theme-color;
+    height: 50px;
+    width: 150px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    border: solid 1px rgb(187, 187, 37);
+}
+
+// ******************** MENU TITLE ********************
+
+#menu-title {
+    text-align: center;
+
+}
+
+// ********************  MENU CONTENT ********************
+
+.menu {
+    background-color: $secondary-theme-color;
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+.menu > button {
+    background-color: $primary-theme-color;
+    height: 50px;
+    width: 150px;
+    color: #fff;
+    display: block;
+    margin: 35px auto;
+    border: solid 1px rgb(187, 187, 37);
+}
+
+.pricing-item {
+    margin: 10px 0px 10px 20px;
+}
+
+.pricing-main {
+    margin: 5px auto;
+}
+
+.pricing-main > h6 {
+    display: inline-block;
+}
+
+.pricing-price {
+    float: right;
+}
+
+.pricing-desc > p {
+    display: inline-block;
 }
