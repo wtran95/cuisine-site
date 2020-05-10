@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Caviar Dreams Bold";
+  src: url(/fonts/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+  font-family: "Metropolis1920";
+  src: url(/fonts/Metropolis1920-Regular.ttf);
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -7353,19 +7363,19 @@ textarea.form-control {
   text-align: center;
 }
 
-@font-face {
-  font-family: "Caviar Dreams Bold";
-  src: url(/fonts/CaviarDreams_Bold.ttf);
-}
-
-@font-face {
-  font-family: "Metropolis1920";
-  src: url(/fonts/Metropolis1920-Regular.ttf);
-}
-
 body {
   background-color: #0b1315;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Caviar Dreams Bold";
+  color: #c9ab81;
+}
+
+span.inspired {
+  font-family: "Miniver", cursive;
+  color: #c9ab81;
 }
 
 .dropdown {
@@ -7393,14 +7403,6 @@ body {
   width: 400px;
   text-align: center;
   margin: 20px auto;
-}
-
-span.inspired {
-  font-family: "Miniver", cursive;
-}
-
-.header-font {
-  font-family: "Caviar Dreams Bold";
 }
 
 .description {
@@ -7455,6 +7457,7 @@ span.inspired {
 }
 
 .active, .num:hover {
+  color: #c9ab81;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -7488,6 +7491,8 @@ span.inspired {
 
 #menu-title {
   text-align: center;
+  padding-top: 50px;
+  margin: 40px auto;
 }
 
 .menu {
@@ -7503,7 +7508,11 @@ span.inspired {
   color: #fff;
   display: block;
   margin: 35px auto;
-  border: solid 1px #bbbb25;
+  border: solid 1px #c9ab81;
+}
+
+.menu-content > div {
+  padding: 0;
 }
 
 .pricing-item {
@@ -7516,13 +7525,33 @@ span.inspired {
 
 .pricing-main > h6 {
   display: inline-block;
+  font-size: 1.5rem;
 }
 
 .pricing-price {
   float: right;
+  font-family: "Caviar Dreams Bold";
+  color: #c9ab81;
 }
 
 .pricing-desc > p {
   display: inline-block;
+}
+
+#our-tips {
+  max-width: 100%;
+}
+
+#our-tips > div {
+  padding: 0;
+}
+
+.tips-pic img {
+  max-width: 100%;
+  width: 70%;
+}
+
+.t-content {
+  width: 65%;
 }
 /*# sourceMappingURL=style.css.map */
