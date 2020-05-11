@@ -28,3 +28,21 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     nums[slideIndex - 1].className += " active";
 }
+
+var topButton = document.getElementById("topBtn");
+
+window.onscroll = function(){scrollFunction()};
+
+function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        topButton.style.display = "block";
+    }
+    else {
+        topButton.style.display = "none";
+    }
+}
+
+function topFunc(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

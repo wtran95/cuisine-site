@@ -7583,6 +7583,7 @@ span.inspired {
 .reservation {
   background-color: #0f1d22;
   max-height: 100%;
+  padding-bottom: 50px;
 }
 
 .form-wrap > div {
@@ -7623,5 +7624,23 @@ footer {
 
 .social a {
   margin: 20px 20px;
+}
+
+#topBtn {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  background-color: #0b1315;
+  color: #fff;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  padding: 15px;
+  border: solid 1px #c9ab81;
+  border-radius: 50%;
+}
+
+#topBtn:hover {
+  color: #c9ab81;
 }
 /*# sourceMappingURL=style.css.map */
