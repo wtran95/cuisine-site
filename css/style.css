@@ -7489,7 +7489,7 @@ span.inspired {
   border: solid 1px #bbbb25;
 }
 
-#menu-title {
+.menu-title {
   text-align: center;
   padding-top: 50px;
   margin: 40px auto;
@@ -7540,6 +7540,7 @@ span.inspired {
 
 #our-tips {
   max-width: 100%;
+  margin: 50px auto;
 }
 
 #our-tips > div {
@@ -7553,5 +7554,34 @@ span.inspired {
 
 .t-content {
   width: 65%;
+}
+
+.p-img {
+  background-image: url(/images/main-background-5.jpg);
+  min-height: 600px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu-order {
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+.order-wrapper > img {
+  max-width: 100%;
+  width: 70%;
+}
+
+.text-order-wrapper {
+  margin: 40px auto;
+}
+
+.text-order-wrapper a {
+  text-decoration: none;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
