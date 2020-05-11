@@ -16,6 +16,12 @@ span.inspired {
     color: $theme-font-color;
 }
 
+.top-title {
+    text-align: center;
+    padding-top: 50px;
+    margin: 40px auto;
+}
+
 // ******************** NAV BAR ********************
 
 .dropdown {
@@ -43,7 +49,6 @@ span.inspired {
 #about {
     height: 200px;
     width: 400px;
-    text-align: center;
     margin: 20px auto;
 }
 
@@ -127,9 +132,6 @@ span.inspired {
     max-width: 100%;
 }
 
-#r-content h2, p{
-    text-align: center;
-}
 #r-content button {
     background-color: $primary-theme-color;
     height: 50px;
@@ -137,16 +139,10 @@ span.inspired {
     color: #fff;
     display: block;
     margin: 0 auto;
-    border: solid 1px rgb(187, 187, 37);
+    border: solid 1px $theme-font-color;
 }
 
 // ********************  MENU CONTENT ********************
-
-.menu-title {
-    text-align: center;
-    padding-top: 50px;
-    margin: 40px auto;
-}
 
 .menu {
     background-color: $secondary-theme-color;
@@ -241,4 +237,53 @@ span.inspired {
 .text-order-wrapper a {
     text-decoration: none;
     color: #fff;
+}
+
+// ******************** BOOK A TABLE ********************
+
+.reservation {
+    background-color: $secondary-theme-color;
+    max-height: 100%;
+}
+
+.form-wrap > div {
+    margin: 20px 50px;
+}
+
+.form-wrap button {
+    background-color: $secondary-theme-color;
+    height: 50px;
+    width: 150px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    border: solid 1px $theme-font-color;
+}
+
+#person {
+    overflow: scroll;
+}
+
+// ******************** FOOTER ********************
+
+footer {
+    height: 400px;
+}
+
+.footer-wrap a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-wrap a:hover {
+    color: $theme-font-color;
+}
+
+.info{
+    line-height: 1.6em;
+    margin-top: 100px;
+}
+
+.social a {
+    margin: 20px 20px;
 }

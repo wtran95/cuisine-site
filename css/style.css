@@ -7378,6 +7378,12 @@ span.inspired {
   color: #c9ab81;
 }
 
+.top-title {
+  text-align: center;
+  padding-top: 50px;
+  margin: 40px auto;
+}
+
 .dropdown {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -7401,7 +7407,6 @@ span.inspired {
 #about {
   height: 200px;
   width: 400px;
-  text-align: center;
   margin: 20px auto;
 }
 
@@ -7475,10 +7480,6 @@ span.inspired {
   max-width: 100%;
 }
 
-#r-content h2, p {
-  text-align: center;
-}
-
 #r-content button {
   background-color: #0b1315;
   height: 50px;
@@ -7486,13 +7487,7 @@ span.inspired {
   color: #fff;
   display: block;
   margin: 0 auto;
-  border: solid 1px #bbbb25;
-}
-
-.menu-title {
-  text-align: center;
-  padding-top: 50px;
-  margin: 40px auto;
+  border: solid 1px #c9ab81;
 }
 
 .menu {
@@ -7583,5 +7578,50 @@ span.inspired {
 .text-order-wrapper a {
   text-decoration: none;
   color: #fff;
+}
+
+.reservation {
+  background-color: #0f1d22;
+  max-height: 100%;
+}
+
+.form-wrap > div {
+  margin: 20px 50px;
+}
+
+.form-wrap button {
+  background-color: #0f1d22;
+  height: 50px;
+  width: 150px;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  border: solid 1px #c9ab81;
+}
+
+#person {
+  overflow: scroll;
+}
+
+footer {
+  height: 400px;
+}
+
+.footer-wrap a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-wrap a:hover {
+  color: #c9ab81;
+}
+
+.info {
+  line-height: 1.6em;
+  margin-top: 100px;
+}
+
+.social a {
+  margin: 20px 20px;
 }
 /*# sourceMappingURL=style.css.map */
