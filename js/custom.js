@@ -42,7 +42,10 @@ function scrollFunction(){
     }
 }
 
-function topFunc(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+topButton.addEventListener("click", function(){
+    window.scrollTo({
+        top:0,
+        left: 0,
+        behavior: "smooth"
+    });
+});

@@ -280,6 +280,12 @@ footer {
     color: $theme-font-color;
 }
 
+#person { 
+    height: auto;
+    max-height: 300px;
+    overflow: scroll;
+}
+
 .info{
     line-height: 1.6em;
     margin-top: 100px;
@@ -302,7 +308,6 @@ footer {
     padding: 15px;
     border: solid 1px $theme-font-color;
     border-radius: 50%;
-
 }
 
 #topBtn:hover {

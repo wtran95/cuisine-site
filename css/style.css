@@ -7617,6 +7617,12 @@ footer {
   color: #c9ab81;
 }
 
+#person {
+  height: auto;
+  max-height: 300px;
+  overflow: scroll;
+}
+
 .info {
   line-height: 1.6em;
   margin-top: 100px;
