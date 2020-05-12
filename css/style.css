@@ -7421,6 +7421,7 @@ span.inspired {
 
 #iconic-pic > div > img {
   max-width: 100%;
+  width: 65%;
 }
 
 #rating {
@@ -7468,10 +7469,6 @@ span.inspired {
 }
 
 #recommendation {
-  margin-bottom: 50px;
-}
-
-#recommendation > div {
   margin: 0;
   padding: 0;
 }
@@ -7506,16 +7503,17 @@ span.inspired {
   border: solid 1px #c9ab81;
 }
 
-.menu-content > div {
+#menu-content {
+  margin: 0;
   padding: 0;
 }
 
 .pricing-item {
-  margin: 10px 0px 10px 20px;
+  padding: 10px;
 }
 
 .pricing-main {
-  margin: 5px auto;
+  margin: 0;
 }
 
 .pricing-main > h6 {
@@ -7527,6 +7525,10 @@ span.inspired {
   float: right;
   font-family: "Caviar Dreams Bold";
   color: #c9ab81;
+}
+
+.pricing-desc {
+  margin-left: 0;
 }
 
 .pricing-desc > p {
