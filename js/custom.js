@@ -11,7 +11,7 @@ function currentSlide(n){
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("slide-contents");
     console.log(slides.length);
     var nums = document.getElementsByClassName("num");
 

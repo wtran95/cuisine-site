@@ -8,18 +8,52 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font;
+    font-weight: 700;
+    text-transform: uppercase;
     color: $theme-font-color;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.27em;
+    letter-spacing: .22em;
+}
+
+h2 {
+    font-size: 41px;
+    line-height: 1.31em;
+    letter-spacing: .23em;
+}
+
+h5 {
+    font-size: 19px;
+    line-height: 1.52em;
 }
 
 span.inspired {
     font-family: $inspired-font;
     color: $theme-font-color;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .04em;
+    text-transform: none;
+    margin-bottom: 13px;
 }
 
 .top-title {
     text-align: center;
     padding-top: 50px;
     margin: 40px auto;
+}
+
+.text-description {
+    font-family: $description-font;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+    color: $secondary-font-color;
 }
 
 // ******************** NAV BAR ********************
@@ -52,13 +86,7 @@ span.inspired {
     margin: 20px auto;
 }
 
-
-.description{
-    font-family: $description-font;
-}
-
 // ******************** ICONIC PICTURE ********************
-
 
 #iconic-pic {
     margin: 0;
@@ -67,16 +95,12 @@ span.inspired {
 
 #iconic-pic > div > img {
     max-width: 100%;
-    width: 65%;
 }
 
 // ******************** RATING ********************
 
 #rating {
     margin: 50px 0px;
-}
-
-#rating > div {
     padding: 0;
 }
 
@@ -84,24 +108,40 @@ span.inspired {
     max-width: 100%;
 }
 
-#quote {
+#mySlide {
     background-color: $secondary-theme-color;
     max-width: 100%;
 }
 
-#quote > p {
+#mySlide > p {
     font-size: 5rem;
     margin: 50px 0px 0px 0px ;
+    color: $theme-font-color;
+}
+
+#rating-pic {
+    background-image: url(/images/main-img-4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
 // SLIDE SHOW
 
-#slideshow-container {
-    padding: 10px 20px;
-    text-align: center;
+.slideshow-container {
+    padding: 10px 80px;
 }
 
-#num-container {
+.slide-contents p:first-child {
+    font-family: $inspired-font;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: #afb8b8;
+    font-size: 22px;
+    line-height: 39px;
+}
+
+.num-container {
     text-align: center;
     padding: 20px;
 }
@@ -134,7 +174,7 @@ span.inspired {
     background-color: $primary-theme-color;
     height: 50px;
     width: 150px;
-    color: #fff;
+    color: $secondary-font-color;
     display: block;
     margin: 0 auto;
     border: solid 1px $theme-font-color;
@@ -152,7 +192,7 @@ span.inspired {
     background-color: $primary-theme-color;
     height: 50px;
     width: 150px;
-    color: #fff;
+    color: $secondary-font-color;
     display: block;
     margin: 35px auto;
     border: solid 1px $theme-font-color;
@@ -182,12 +222,14 @@ span.inspired {
     color: $theme-font-color;
 }
 
-.pricing-desc {
-    margin-left: 0;
-}
-
 .pricing-desc > p {
     display: inline-block;
+    font-family: $description-font;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+    color: $secondary-font-color;
     
 }
 
@@ -240,7 +282,7 @@ span.inspired {
 
 .text-order-wrapper a {
     text-decoration: none;
-    color: #fff;
+    color: $secondary-font-color;
 }
 
 // ******************** BOOK A TABLE ********************
@@ -259,25 +301,66 @@ span.inspired {
     background-color: $secondary-theme-color;
     height: 50px;
     width: 150px;
-    color: #fff;
+    color: $secondary-font-color;
     display: block;
     margin: 0 auto;
     border: solid 1px $theme-font-color;
 }
 
-#person {
-    overflow: scroll;
+// Reset Select 
+
+select {
+    appearance: none;
+    outline: 0;
+    border: solid 1px $border-box-color !important;
+    background: $secondary-theme-color;
+    background-image: none;
 }
+
+.box {
+    position: relative;
+    display: flex;
+    width: 10em;
+    height: 3em;
+    background-color: $secondary-theme-color;
+    overflow: hidden;
+}
+
+select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.box::after {
+    content: '\25BC';
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    padding: 0 .5em;
+    background: $secondary-theme-color;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+.box:hover::after {
+    color: $theme-font-color;
+}
+
+
+
 
 // ******************** FOOTER ********************
 
 footer {
-    height: 400px;
+    height: 300px;
 }
 
 .footer-wrap a {
     text-decoration: none;
-    color: #fff;
+    color: $secondary-font-color;
 }
 
 .footer-wrap a:hover {
@@ -305,7 +388,7 @@ footer {
     cursor: pointer;
     position: fixed;
     background-color: $primary-theme-color;
-    color: #fff;
+    color: $secondary-font-color;
     bottom: 20px;
     right: 30px;
     z-index: 99;

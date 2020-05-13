@@ -175,70 +175,63 @@
             <div id="about" class="text-center">
                 <span class="inspired">Our story</span>
                 <h1>ABOUT US</h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu sm od tempor
+                <p class="text-description">Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu sm od tempor
                     incididunt ut abore et
                     dolore mag aliqua. Ut enim ad minm eniam quis nostrud.</p>
             </div>
 
-            <!-- ******************** ICONIC PICTURE (DECOR) ******************** -->
+            <!-- ******************** ICONIC PICTURE ******************** -->
 
-            <div id="iconic-pic" class="row">
-                <div class="col-md-4 text-center"><img src="./images/main-img-1.jpg" alt="main-image-1"></div>
-                <div class="col-md-4 text-center">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ea accusamus quas accusantium
-                        autem quod tempora, reprehenderit est sit perspiciatis excepturi perferendis minima. Dolorum
-                        voluptate distinctio pariatur csorrupti facere cum qui temporibus fugiat! Perspiciatis voluptates
-                        cupiditate magnam eum unde nemo asperiores recusandae? Ipsam omnis praesentium, tempora,
-                        consequuntur minus similique provident beatae libero quisquam facere maxime sit recusandae
-                        laboriosam neque illo placeat vel asperiores, ea deserunt illum. Dolore quae nam ex harum
-                        aliquid ducimus! Accusantium quos eveniet libero vitae repellendus? Minima, delectus dolorum
-                        omnis similique excepturi esse quam amet accusantium.</p>
+            <div id="iconic-pic" class="row justify-content-center">
+                <div class="col-md-3 text-center"><img src="./images/main-img-1.jpg" alt="main-image-1"></div>
+                <div class="col-md-3 text-center">
+                    <p>SPARE SPACE</p>
                 </div>
-                <div class="col-md-4 text-center"><img src="./images/main-img-2.jpg" alt="main-image-2">
+                <div class="col-md-3 text-center"><img src="./images/main-img-2.jpg" alt="main-image-2">
                 </div>
             </div>
 
-            <!-- ******************** RATING (DECOR) ******************** -->
+            <!-- ******************** RATING ******************* -->
 
             <div id="rating" class="row">
-                <div id="quote" class="col-md-6">
+                <div id="mySlide" class="col-md-6 text-center">
                     <p>&#8221;</p>
-                    <div id="slideshow-container">
-                        <div class="mySlides">
+                    <div class="slideshow-container">
+                        <div class="slide-contents">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisic sed do eiusmod tempor incididunt ut
                                 labore
                                 et
                                 dolore magna aliqua ut enim ad.</p>
                             <h5>Robert Chang</h5>
-                            <p>Sommelier</p>
+                            <p class="text-description">Sommelier</p>
                         </div>
-                        <div class="mySlides">
+                        <div class="slide-contents">
                             <p>
                                 Ut enim ad minim venia orem ipsum dolor sit amet, consectetur adipisic sed do. Eiusmod
                                 tempor incididunt ut labore et dolore magna.
                             </p>
                             <h5>Jan Winsent</h5>
-                            <p>Cook</p>
+                            <p class="text-description">Cook</p>
                         </div>
-                        <div class="mySlides">
+                        <div class="slide-contents">
                             <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia orem
                                 ipsum dolor sit amet, consectetur.</p>
                             <h5>Andrea Chung</h5>
-                            <p>Cook</p>
+                            <p class="text-description">Cook</p>
                         </div>
                     </div>
-                    <div id="num-container">
+                    <div class="num-container">
                         <span class="num" onclick="currentSlide(1)">1</span>
                         <span class="num" onclick="currentSlide(2)">2</span>
                         <span class="num" onclick="currentSlide(3)">3</span>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="/images/main-img-4.jpg" alt="main-img-4">
+                <div id="rating-pic" class="col-md-6">
+                    <!-- <img src="/images/main-img-4.jpg" alt="main-img-4"> -->
                 </div>
             </div>
 
-            <!-- ******************** RECOMMENDATION (DECOR) ******************** -->
+            <!-- ******************** RECOMMENDATION ******************** -->
 
             <div id="recommendation" class="row justify-content-around">
                 <div class="col-md-4">
@@ -247,7 +240,7 @@
                 <div id="r-content" class="col-md-4 text-center">
                     <span class="inspired">Recommedations</span>
                     <h2>Our best specialties</h2>
-                    <p>Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu smotem por incididunt ut
+                    <p class="text-description">Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu smotem por incididunt ut
                         abore et dolore magali qua. Ut enim ad minm eni amquis nostrud exercitation.</p>
                     <button type="button">SEE ALL</button>
                 </div>
@@ -379,7 +372,7 @@
                 <div class="t-content align-self-start text-center">
                     <span class="inspired">Our food philosophy</span>
                     <h2>Our tips</h2>
-                    <p>Lorem ipsum dolor sit amet, consectet nei ad icing eli sed do eiu sm od tempor se incidid sens ne
+                    <p class="text-description">Lorem ipsum dolor sit amet, consectet nei ad icing eli sed do eiu sm od tempor se incidid sens ne
                         utabor et dolore magiqua. Ut enim ad miains eniam quis nostrudas exercitation ullam de cm
                         laborisnw si utali</p>
                 </div>
@@ -429,8 +422,8 @@
                 </div>
                 <form>
                     <div class="form-wrap d-flex  align-items-center justify-content-md-center flex-sm-column flex-md-row ">
-                        <div class="form-group">
-                            <select class="form-control" id="person" size="1">
+                        <div class="box">
+                            <select name="person" id="person">
                                 <option>1 Person</option>
                                 <option>2 People</option>
                                 <option>3 People</option>
@@ -454,12 +447,12 @@
                             </select>
                         </div>
         
-                        <div class="form-group">
+                        <div >
                             <input type="date" id="date-book">
                         </div>
         
-                        <div class="form-group">
-                            <select class="form-control" id="time">
+                        <div class="box">
+                            <select id="time">
                                 <option>7:00 pm</option>
                                 <option>7:30 pm</option>
                                 <!-- <option>8:00 pm</option>

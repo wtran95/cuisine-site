@@ -7370,18 +7370,52 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Caviar Dreams Bold";
+  font-weight: 700;
+  text-transform: uppercase;
   color: #c9ab81;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.27em;
+  letter-spacing: .22em;
+}
+
+h2 {
+  font-size: 41px;
+  line-height: 1.31em;
+  letter-spacing: .23em;
+}
+
+h5 {
+  font-size: 19px;
+  line-height: 1.52em;
 }
 
 span.inspired {
   font-family: "Miniver", cursive;
   color: #c9ab81;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: .04em;
+  text-transform: none;
+  margin-bottom: 13px;
 }
 
 .top-title {
   text-align: center;
   padding-top: 50px;
   margin: 40px auto;
+}
+
+.text-description {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
 }
 
 .dropdown {
@@ -7410,10 +7444,6 @@ span.inspired {
   margin: 20px auto;
 }
 
-.description {
-  font-family: "Josefin Sans", sans-serif;
-}
-
 #iconic-pic {
   margin: 0;
   padding: 0;
@@ -7421,14 +7451,10 @@ span.inspired {
 
 #iconic-pic > div > img {
   max-width: 100%;
-  width: 65%;
 }
 
 #rating {
   margin: 50px 0px;
-}
-
-#rating > div {
   padding: 0;
 }
 
@@ -7436,22 +7462,38 @@ span.inspired {
   max-width: 100%;
 }
 
-#quote {
+#mySlide {
   background-color: #0f1d22;
   max-width: 100%;
 }
 
-#quote > p {
+#mySlide > p {
   font-size: 5rem;
   margin: 50px 0px 0px 0px;
+  color: #c9ab81;
 }
 
-#slideshow-container {
-  padding: 10px 20px;
-  text-align: center;
+#rating-pic {
+  background-image: url(/images/main-img-4.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
-#num-container {
+.slideshow-container {
+  padding: 10px 80px;
+}
+
+.slide-contents p:first-child {
+  font-family: "Miniver", cursive;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: #afb8b8;
+  font-size: 22px;
+  line-height: 39px;
+}
+
+.num-container {
   text-align: center;
   padding: 20px;
 }
@@ -7527,12 +7569,14 @@ span.inspired {
   color: #c9ab81;
 }
 
-.pricing-desc {
-  margin-left: 0;
-}
-
 .pricing-desc > p {
   display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
 }
 
 #our-tips {
@@ -7602,12 +7646,55 @@ span.inspired {
   border: solid 1px #c9ab81;
 }
 
-#person {
-  overflow: scroll;
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: solid 1px #715b3e !important;
+  background: #0f1d22;
+  background-image: none;
+}
+
+.box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10em;
+  height: 3em;
+  background-color: #0f1d22;
+  overflow: hidden;
+}
+
+select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box::after {
+  content: '\25BC';
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  padding: 0 .5em;
+  background: #0f1d22;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.box:hover::after {
+  color: #c9ab81;
 }
 
 footer {
-  height: 400px;
+  height: 300px;
 }
 
 .footer-wrap a {
