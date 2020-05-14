@@ -7400,7 +7400,6 @@ span.inspired {
   line-height: 28px;
   letter-spacing: .04em;
   text-transform: none;
-  margin-bottom: 13px;
 }
 
 .top-title {
@@ -7441,7 +7440,7 @@ span.inspired {
 #about {
   height: 200px;
   width: 400px;
-  margin: 20px auto;
+  margin: 100px auto;
 }
 
 #iconic-pic {
@@ -7449,7 +7448,7 @@ span.inspired {
   padding: 0;
 }
 
-#iconic-pic > div > img {
+#iconic-pic div img {
   max-width: 100%;
 }
 
@@ -7457,17 +7456,9 @@ span.inspired {
   margin: 50px 0px;
 }
 
-.mySlide {
+#rating .mySlide {
   background-color: #0f1d22;
   max-width: 100%;
-}
-
-.mySlide > p {
-  font-size: 5rem;
-  color: #c9ab81;
-}
-
-.mySlide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7483,16 +7474,11 @@ span.inspired {
           justify-content: center;
 }
 
-.slideshow-container {
-  padding: 0 auto;
-  position: relative;
+#rating .mySlide .slideshow-container {
+  padding: 0 200px;
 }
 
-.slide-contents {
-  width: auto;
-}
-
-.slide-contents p:first-child {
+#rating .mySlide .slideshow-container .slide-contents p:first-child {
   font-family: "Miniver", cursive;
   font-weight: 400;
   letter-spacing: .04em;
@@ -7501,28 +7487,42 @@ span.inspired {
   line-height: 39px;
 }
 
-.num-container {
+#rating .mySlide .num-container {
   text-align: center;
   padding: 20px;
 }
 
-.num {
+#rating .mySlide .num-container .num {
   cursor: pointer;
   margin: 0 5px;
   display: inline-block;
 }
 
-.active, .num:hover {
+#rating .mySlide p:first-child {
+  font-size: 5rem;
+  color: #c9ab81;
+}
+
+#rating .mySlide .active, #rating .mySlide .num:hover {
   color: #c9ab81;
   font-weight: bold;
   text-decoration: underline;
 }
 
-#rating-pic {
+#rating #rating-pic {
   background-image: url(/images/main-img-4.jpg);
   background-position: center;
   background-size: cover;
   height: 85vh;
+}
+
+@media only screen and (max-width: 1440px) {
+  #rating .mySlide .slideshow-container {
+    padding: 0 10%;
+  }
+  #our-tips .t-content {
+    padding: 0 15%;
+  }
 }
 
 #recommendation {
@@ -7530,20 +7530,20 @@ span.inspired {
   padding: 160px 0;
 }
 
-#recommendation > div > img {
+#recommendation div > img {
   max-width: 100%;
   padding-right: 50px;
 }
 
-#r-content {
+#recommendation #r-content {
   padding-left: 50px;
 }
 
-#r-content p {
+#recommendation #r-content p {
   margin-bottom: 45px;
 }
 
-#r-content button {
+#recommendation #r-content button {
   background-color: #0b1315;
   height: 50px;
   width: 150px;
@@ -7571,6 +7571,7 @@ span.inspired {
 
 #menu-content {
   margin: 0;
+  padding: 0 250px;
 }
 
 .pricing-item {
@@ -7612,12 +7613,11 @@ span.inspired {
 }
 
 .tips-pic img {
-  max-width: 100%;
   width: 70%;
 }
 
 .t-content {
-  width: 65%;
+  padding: 0 50px;
 }
 
 .button {
@@ -7626,6 +7626,11 @@ span.inspired {
   height: 50px;
   width: 115px;
   border: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.button:hover {
   color: #c9ab81;
 }
 
@@ -7640,13 +7645,12 @@ span.inspired {
 }
 
 .menu-order {
-  max-width: 100%;
-  margin: 50px auto;
+  margin: 100px auto;
+  padding: 0 150px;
 }
 
 .order-wrapper > img {
-  max-width: 100%;
-  width: 70%;
+  width: 90%;
 }
 
 .text-order-wrapper {
@@ -7723,6 +7727,15 @@ select {
 
 .box:hover::after {
   color: #c9ab81;
+}
+
+#date-book {
+  display: block;
+  height: 50px;
+  width: 150px;
+  background-color: #0f1d22;
+  border: solid 1px #715b3e;
+  color: #fff;
 }
 
 footer {

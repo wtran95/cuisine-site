@@ -1,10 +1,6 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// function plusSlides(n){
-//     showSlides(slideIndex += n);
-// }
-
 function currentSlide(n){
     showSlides(slideIndex = n);
 }
@@ -29,6 +25,7 @@ function showSlides(n) {
     nums[slideIndex - 1].className += " active";
 }
 
+//To Top Button
 var topButton = document.getElementById("topBtn");
 
 window.onscroll = function(){scrollFunction()};
@@ -50,3 +47,7 @@ topButton.addEventListener("click", function(){
     });
 });
 
+//Get to date day
+
+var today = new Date().toISOString().substr(0, 10);
+document.querySelector("#date-book").value = today;

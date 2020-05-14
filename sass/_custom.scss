@@ -38,7 +38,6 @@ span.inspired {
     line-height: 28px;
     letter-spacing: .04em;
     text-transform: none;
-    margin-bottom: 13px;
 }
 
 .top-title {
@@ -83,7 +82,7 @@ span.inspired {
 #about {
     height: 200px;
     width: 400px;
-    margin: 20px auto;
+    margin: 100px auto;
 }
 
 // ******************** ICONIC PICTURE ********************
@@ -91,110 +90,121 @@ span.inspired {
 #iconic-pic {
     margin: 0;
     padding: 0;
+
+    div img {
+        max-width: 100%;
+    }
 }
 
-#iconic-pic > div > img {
-    max-width: 100%;
-}
+
 
 // ******************** RATING ********************
 
 #rating {
     margin: 50px 0px;
+
+    // SLIDE SHOW
+    .mySlide {
+        background-color: $secondary-theme-color;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        //SLIDESHOW CONTAINER
+        .slideshow-container {
+            padding: 0 200px; //right here!
+
+            .slide-contents p:first-child {
+                font-family: $inspired-font;
+                font-weight: 400;
+                letter-spacing: .04em;
+                color: #afb8b8;
+                font-size: 22px;
+                line-height: 39px;
+            }
+        }
+
+        //NUMBER CONTAINER
+        .num-container {
+            text-align: center;
+            padding: 20px;
+
+            .num {
+                cursor: pointer;
+                margin: 0 5px;
+                display: inline-block;
+            }
+        }
+
+        //QUOTATION MARK
+        p:first-child {
+            font-size: 5rem;
+            color: $theme-font-color;
+        }
+
+        //HOVER EFFECT
+        .active, .num:hover {
+            color: $theme-font-color;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+    
+    // RIGHT BACKGROUND PICTURE
+    #rating-pic {
+        background-image: url(/images/main-img-4.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 85vh;
+    }
 }
 
-.mySlide {
-    background-color: $secondary-theme-color;
-    max-width: 100%;
+
+//Testing Purpose
+@media only screen and (max-width: 1440px){
+    #rating .mySlide .slideshow-container {
+        padding: 0 10%;
+    }
+
+    #our-tips .t-content {
+        padding: 0 15%;
+    }
 }
 
-.mySlide > p {
-    font-size: 5rem;
-    color: $theme-font-color;
-}
 
-// SLIDE SHOW
 
-.mySlide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.slideshow-container {
-    padding: 0 auto;
-    position: relative;
-}
-
-.slide-contents {
-    width: auto;
-}
-
-.slide-contents p:first-child {
-    font-family: $inspired-font;
-    font-weight: 400;
-    letter-spacing: .04em;
-    color: #afb8b8;
-    font-size: 22px;
-    line-height: 39px;
-}
-
-.num-container {
-    text-align: center;
-    padding: 20px;
-}
-
-.num {
-    cursor: pointer;
-    margin: 0 5px;
-    display: inline-block;
-}
-
-.active, .num:hover {
-    color: $theme-font-color;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-// LEFT BACKGROUND PICTURE
-
-#rating-pic {
-    background-image: url(/images/main-img-4.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 85vh;
-}
-
-// ******************** RECOMMENDATION (DECOR) ********************
+// ******************** RECOMMENDATION ********************
 
 #recommendation {
     margin: 0;
     padding: 160px 0;
-}
 
+    div > img {
+        max-width: 100%;
+        padding-right: 50px;
+    }
 
-#recommendation > div > img {
-    max-width: 100%;
-    padding-right: 50px;
-}
+    //RIGHT CONTENT
+    #r-content {
+        padding-left: 50px;
 
-#r-content {
-    padding-left: 50px;
-}
+        p{
+            margin-bottom: 45px;
+        }
 
-#r-content p {
-    margin-bottom: 45px;
-}
-
-#r-content button {
-    background-color: $primary-theme-color;
-    height: 50px;
-    width: 150px;
-    color: $secondary-font-color;
-    display: block;
-    margin: 0 auto;
-    border: solid 1px $theme-font-color;
+        // VIEW ALL BUTTON
+        button {
+            background-color: $primary-theme-color;
+            height: 50px;
+            width: 150px;
+            color: $secondary-font-color;
+            display: block;
+            margin: 0 auto;
+            border: solid 1px $theme-font-color;
+        }
+    }
 }
 
 // ********************  MENU CONTENT ********************
@@ -203,6 +213,7 @@ span.inspired {
     background-color: $secondary-theme-color;
     max-width: 100%;
     padding-bottom: 20px;
+
 }
 
 .menu > button {
@@ -217,6 +228,7 @@ span.inspired {
 
 #menu-content {
     margin: 0;
+    padding: 0 250px;
 }
 
 .pricing-item {
@@ -252,7 +264,7 @@ span.inspired {
     
 }
 
-// ******************** OUR TIPS (DECOR) ********************
+// ******************** OUR TIPS ********************
 
 #our-tips {
     max-width: 100%;
@@ -261,12 +273,11 @@ span.inspired {
 }
 
 .tips-pic img{
-    max-width: 100%;
     width: 70%;
 }
 
 .t-content {
-    width: 65%;
+    padding: 0 50px;
 }
 
 .button {
@@ -275,6 +286,11 @@ span.inspired {
     height: 50px;
     width: 115px;
     border: none;
+    color: $secondary-font-color;
+    text-transform: uppercase;
+}
+
+.button:hover {
     color: $theme-font-color;
 }
 
@@ -292,13 +308,12 @@ span.inspired {
 // ******************** MENU MEAL ORDER ********************
 
 .menu-order {
-    max-width: 100%;
-    margin: 50px auto;
+    margin: 100px auto;
+    padding: 0 150px;
 }
 
 .order-wrapper > img{
-    max-width: 100%;
-    width: 70%;
+    width: 90%;
 }
 
 .text-order-wrapper{
@@ -354,7 +369,7 @@ select {
 select {
     flex: 1;
     padding: 0 .5em;
-    color: #fff;
+    color: $secondary-font-color;
     cursor: pointer;
 }
 
@@ -374,7 +389,14 @@ select {
     color: $theme-font-color;
 }
 
-
+#date-book {
+    display: block;
+    height: 50px;
+    width: 150px;
+    background-color: $secondary-theme-color;
+    border: solid 1px $border-box-color;
+    color: $secondary-font-color;
+}
 
 
 // ******************** FOOTER ********************
