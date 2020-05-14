@@ -101,35 +101,34 @@ span.inspired {
 
 #rating {
     margin: 50px 0px;
-    padding: 0;
 }
 
-#rating > div > img {
-    max-width: 100%;
-}
-
-#mySlide {
+.mySlide {
     background-color: $secondary-theme-color;
     max-width: 100%;
 }
 
-#mySlide > p {
+.mySlide > p {
     font-size: 5rem;
-    margin: 50px 0px 0px 0px ;
     color: $theme-font-color;
-}
-
-#rating-pic {
-    background-image: url(/images/main-img-4.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
 }
 
 // SLIDE SHOW
 
+.mySlide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .slideshow-container {
-    padding: 10px 80px;
+    padding: 0 auto;
+    position: relative;
+}
+
+.slide-contents {
+    width: auto;
 }
 
 .slide-contents p:first-child {
@@ -158,16 +157,34 @@ span.inspired {
     text-decoration: underline;
 }
 
+// LEFT BACKGROUND PICTURE
+
+#rating-pic {
+    background-image: url(/images/main-img-4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+}
+
 // ******************** RECOMMENDATION (DECOR) ********************
 
 #recommendation {
     margin: 0;
-    padding: 0;
+    padding: 160px 0;
 }
 
 
 #recommendation > div > img {
     max-width: 100%;
+    padding-right: 50px;
+}
+
+#r-content {
+    padding-left: 50px;
+}
+
+#r-content p {
+    margin-bottom: 45px;
 }
 
 #r-content button {
@@ -200,7 +217,6 @@ span.inspired {
 
 #menu-content {
     margin: 0;
-    padding: 0;
 }
 
 .pricing-item {
@@ -219,6 +235,9 @@ span.inspired {
 .pricing-price {
     float: right;
     font-family: $header-font;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: inherit;
     color: $theme-font-color;
 }
 
@@ -237,11 +256,8 @@ span.inspired {
 
 #our-tips {
     max-width: 100%;
-    margin: 50px auto;
-}
-
-#our-tips > div {
-    padding: 0;
+    margin: 150px auto;
+    padding: 0 150px;
 }
 
 .tips-pic img{
@@ -251,6 +267,15 @@ span.inspired {
 
 .t-content {
     width: 65%;
+}
+
+.button {
+    display: inline-block;
+    background-color: $primary-theme-color;
+    height: 50px;
+    width: 115px;
+    border: none;
+    color: $theme-font-color;
 }
 
 // ******************** PARALLAX EFFECT ********************
@@ -290,7 +315,7 @@ span.inspired {
 .reservation {
     background-color: $secondary-theme-color;
     max-height: 100%;
-    padding-bottom: 50px;
+    padding: 10px 0px 150px 0px;
 }
 
 .form-wrap > div {
@@ -320,8 +345,8 @@ select {
 .box {
     position: relative;
     display: flex;
-    width: 10em;
-    height: 3em;
+    width: 150px;
+    height: 50px;
     background-color: $secondary-theme-color;
     overflow: hidden;
 }

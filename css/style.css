@@ -7455,33 +7455,41 @@ span.inspired {
 
 #rating {
   margin: 50px 0px;
-  padding: 0;
 }
 
-#rating > div > img {
-  max-width: 100%;
-}
-
-#mySlide {
+.mySlide {
   background-color: #0f1d22;
   max-width: 100%;
 }
 
-#mySlide > p {
+.mySlide > p {
   font-size: 5rem;
-  margin: 50px 0px 0px 0px;
   color: #c9ab81;
 }
 
-#rating-pic {
-  background-image: url(/images/main-img-4.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+.mySlide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slideshow-container {
-  padding: 10px 80px;
+  padding: 0 auto;
+  position: relative;
+}
+
+.slide-contents {
+  width: auto;
 }
 
 .slide-contents p:first-child {
@@ -7510,13 +7518,29 @@ span.inspired {
   text-decoration: underline;
 }
 
+#rating-pic {
+  background-image: url(/images/main-img-4.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+}
+
 #recommendation {
   margin: 0;
-  padding: 0;
+  padding: 160px 0;
 }
 
 #recommendation > div > img {
   max-width: 100%;
+  padding-right: 50px;
+}
+
+#r-content {
+  padding-left: 50px;
+}
+
+#r-content p {
+  margin-bottom: 45px;
 }
 
 #r-content button {
@@ -7547,7 +7571,6 @@ span.inspired {
 
 #menu-content {
   margin: 0;
-  padding: 0;
 }
 
 .pricing-item {
@@ -7566,6 +7589,9 @@ span.inspired {
 .pricing-price {
   float: right;
   font-family: "Caviar Dreams Bold";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: inherit;
   color: #c9ab81;
 }
 
@@ -7581,11 +7607,8 @@ span.inspired {
 
 #our-tips {
   max-width: 100%;
-  margin: 50px auto;
-}
-
-#our-tips > div {
-  padding: 0;
+  margin: 150px auto;
+  padding: 0 150px;
 }
 
 .tips-pic img {
@@ -7595,6 +7618,15 @@ span.inspired {
 
 .t-content {
   width: 65%;
+}
+
+.button {
+  display: inline-block;
+  background-color: #0b1315;
+  height: 50px;
+  width: 115px;
+  border: none;
+  color: #c9ab81;
 }
 
 .p-img {
@@ -7629,7 +7661,7 @@ span.inspired {
 .reservation {
   background-color: #0f1d22;
   max-height: 100%;
-  padding-bottom: 50px;
+  padding: 10px 0px 150px 0px;
 }
 
 .form-wrap > div {
@@ -7661,8 +7693,8 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10em;
-  height: 3em;
+  width: 150px;
+  height: 50px;
   background-color: #0f1d22;
   overflow: hidden;
 }
