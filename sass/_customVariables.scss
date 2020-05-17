@@ -1,8 +1,20 @@
-//Color
-$primary-theme-color:#0b1315;
+//===========
+//  Color =
+//========
+
+// Background color
+$primary-theme-color:#0b1315; 
 $secondary-theme-color: #0f1d22;
 
-//Fonts
+// Text color
+$theme-font-color: #c9ab81;
+$border-box-color: #715b3e;
+$secondary-font-color: #fff;
+
+//===========
+//  Fonts =
+//========
+
 @font-face {
     font-family: "Caviar Dreams Bold";
     src: url(/fonts/CaviarDreams_Bold.ttf);
@@ -14,9 +26,6 @@ $secondary-theme-color: #0f1d22;
 }
 
 $inspired-font: 'Miniver', cursive;
-$description-font: 'Josefin Sans', sans-serif;
 $header-font: 'Caviar Dreams Bold';
-
-$theme-font-color: #c9ab81;
-$border-box-color: #715b3e;
-$secondary-font-color: #fff;
+$description-font: 'Josefin Sans', sans-serif;
+$navbar-font: 'Open Sans Condensed', sans-serif;

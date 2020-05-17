@@ -1,10 +1,14 @@
 // ******************** BODY********************
 body {
     background-color: $primary-theme-color;
-    color: white;
+    font-size: $description-font;
+    font-size: 19px;
+    color: $secondary-font-color;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
-// ********* General using purpose *********
+// ********* Global *********
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font;
@@ -30,7 +34,7 @@ h5 {
     line-height: 1.52em;
 }
 
-span.inspired {
+.inspired {
     font-family: $inspired-font;
     color: $theme-font-color;
     font-size: 19px;
@@ -38,6 +42,7 @@ span.inspired {
     line-height: 28px;
     letter-spacing: .04em;
     text-transform: none;
+    margin-bottom: 13px;
 }
 
 .top-title {
@@ -58,7 +63,7 @@ span.inspired {
 // ******************** NAV BAR ********************
 
 .dropdown {
-    font-family: $description-font;
+    font-family: $navbar-font;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -70,7 +75,7 @@ span.inspired {
     left: 100%;
     top: 0;
     display: none;
-    font-family: $description-font;
+    font-family: $navbar-font;
 }
 
 .dropdown:hover > .submenu {
@@ -79,7 +84,7 @@ span.inspired {
 
 // ******************** ABOUT US ********************
 
-#about {
+.about {
     height: 200px;
     width: 400px;
     margin: 100px auto;
@@ -168,22 +173,21 @@ span.inspired {
         padding: 0 10%;
     }
 
-    #our-tips .t-content {
-        padding: 0 15%;
-    }
+    // .food-philo .t-content {
+    //     padding: 0 15%;
+    // }
 }
 
 
 
 // ******************** RECOMMENDATION ********************
 
-#recommendation {
+.recommendation {
     margin: 0;
     padding: 160px 0;
 
     div > img {
         max-width: 100%;
-        padding-right: 50px;
     }
 
     //RIGHT CONTENT
@@ -228,7 +232,6 @@ span.inspired {
 
 #menu-content {
     margin: 0;
-    padding: 0 250px;
 }
 
 .pricing-item {
@@ -264,20 +267,15 @@ span.inspired {
     
 }
 
-// ******************** OUR TIPS ********************
+// ******************** FOOD PHILOSOPHY ********************
 
-#our-tips {
+.food-philo {
     max-width: 100%;
-    margin: 150px auto;
-    padding: 0 150px;
+    padding: 160px 0;
 }
 
 .tips-pic img{
-    width: 70%;
-}
-
-.t-content {
-    padding: 0 50px;
+    max-width: 100%;
 }
 
 .button {
@@ -308,8 +306,7 @@ span.inspired {
 // ******************** MENU MEAL ORDER ********************
 
 .menu-order {
-    margin: 100px auto;
-    padding: 0 150px;
+    padding-bottom: 152px;
 }
 
 .order-wrapper > img{
@@ -330,11 +327,8 @@ span.inspired {
 .reservation {
     background-color: $secondary-theme-color;
     max-height: 100%;
-    padding: 10px 0px 150px 0px;
-}
-
-.form-wrap > div {
-    margin: 20px 50px;
+    padding-top: 115px;
+    padding-bottom: 110px;
 }
 
 .form-wrap button {
@@ -355,6 +349,10 @@ select {
     border: solid 1px $border-box-color !important;
     background: $secondary-theme-color;
     background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: $secondary-font-color;
+    cursor: pointer;
 }
 
 .box {
@@ -364,13 +362,6 @@ select {
     height: 50px;
     background-color: $secondary-theme-color;
     overflow: hidden;
-}
-
-select {
-    flex: 1;
-    padding: 0 .5em;
-    color: $secondary-font-color;
-    cursor: pointer;
 }
 
 .box::after {
@@ -403,31 +394,31 @@ select {
 
 footer {
     height: 300px;
+
+    .footer-wrap  {
+        a {
+            text-decoration: none;
+            color: $secondary-font-color;
+
+            &:hover {
+                color: $theme-font-color;
+            }
+        }
+        
+    }
+
+    .info{
+        line-height: 1.6em;
+        margin-top: 100px;
+    }
+
+    .social a {
+        margin: 20px 20px;
+    }
 }
 
-.footer-wrap a {
-    text-decoration: none;
-    color: $secondary-font-color;
-}
 
-.footer-wrap a:hover {
-    color: $theme-font-color;
-}
 
-#person { 
-    height: auto;
-    max-height: 300px;
-    overflow: scroll;
-}
-
-.info{
-    line-height: 1.6em;
-    margin-top: 100px;
-}
-
-.social a {
-    margin: 20px 20px;
-}
 
 // Scroll To Top Button 
 #topBtn {
@@ -441,9 +432,8 @@ footer {
     z-index: 99;
     padding: 15px;
     border: solid 1px $theme-font-color;
-    border-radius: 50%;
-}
-
-#topBtn:hover {
-    color: $theme-font-color;
+    border-radius: 60%;
+    &:hover{
+        color: $theme-font-color;
+    }
 }

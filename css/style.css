@@ -7365,7 +7365,11 @@ textarea.form-control {
 
 body {
   background-color: #0b1315;
-  color: white;
+  font-size: "Josefin Sans", sans-serif;
+  font-size: 19px;
+  color: #fff;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7392,7 +7396,7 @@ h5 {
   line-height: 1.52em;
 }
 
-span.inspired {
+.inspired {
   font-family: "Miniver", cursive;
   color: #c9ab81;
   font-size: 19px;
@@ -7400,6 +7404,7 @@ span.inspired {
   line-height: 28px;
   letter-spacing: .04em;
   text-transform: none;
+  margin-bottom: 13px;
 }
 
 .top-title {
@@ -7418,7 +7423,7 @@ span.inspired {
 }
 
 .dropdown {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -7430,14 +7435,14 @@ span.inspired {
   left: 100%;
   top: 0;
   display: none;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .dropdown:hover > .submenu {
   display: block;
 }
 
-#about {
+.about {
   height: 200px;
   width: 400px;
   margin: 100px auto;
@@ -7520,30 +7525,26 @@ span.inspired {
   #rating .mySlide .slideshow-container {
     padding: 0 10%;
   }
-  #our-tips .t-content {
-    padding: 0 15%;
-  }
 }
 
-#recommendation {
+.recommendation {
   margin: 0;
   padding: 160px 0;
 }
 
-#recommendation div > img {
+.recommendation div > img {
   max-width: 100%;
-  padding-right: 50px;
 }
 
-#recommendation #r-content {
+.recommendation #r-content {
   padding-left: 50px;
 }
 
-#recommendation #r-content p {
+.recommendation #r-content p {
   margin-bottom: 45px;
 }
 
-#recommendation #r-content button {
+.recommendation #r-content button {
   background-color: #0b1315;
   height: 50px;
   width: 150px;
@@ -7571,7 +7572,6 @@ span.inspired {
 
 #menu-content {
   margin: 0;
-  padding: 0 250px;
 }
 
 .pricing-item {
@@ -7606,18 +7606,13 @@ span.inspired {
   color: #fff;
 }
 
-#our-tips {
+.food-philo {
   max-width: 100%;
-  margin: 150px auto;
-  padding: 0 150px;
+  padding: 160px 0;
 }
 
 .tips-pic img {
-  width: 70%;
-}
-
-.t-content {
-  padding: 0 50px;
+  max-width: 100%;
 }
 
 .button {
@@ -7645,8 +7640,7 @@ span.inspired {
 }
 
 .menu-order {
-  margin: 100px auto;
-  padding: 0 150px;
+  padding-bottom: 152px;
 }
 
 .order-wrapper > img {
@@ -7665,11 +7659,8 @@ span.inspired {
 .reservation {
   background-color: #0f1d22;
   max-height: 100%;
-  padding: 10px 0px 150px 0px;
-}
-
-.form-wrap > div {
-  margin: 20px 50px;
+  padding-top: 115px;
+  padding-bottom: 110px;
 }
 
 .form-wrap button {
@@ -7690,6 +7681,12 @@ select {
   border: solid 1px #715b3e !important;
   background: #0f1d22;
   background-image: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
 }
 
 .box {
@@ -7701,15 +7698,6 @@ select {
   height: 50px;
   background-color: #0f1d22;
   overflow: hidden;
-}
-
-select {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0 .5em;
-  color: #fff;
-  cursor: pointer;
 }
 
 .box::after {
@@ -7742,27 +7730,21 @@ footer {
   height: 300px;
 }
 
-.footer-wrap a {
+footer .footer-wrap a {
   text-decoration: none;
   color: #fff;
 }
 
-.footer-wrap a:hover {
+footer .footer-wrap a:hover {
   color: #c9ab81;
 }
 
-#person {
-  height: auto;
-  max-height: 300px;
-  overflow: scroll;
-}
-
-.info {
+footer .info {
   line-height: 1.6em;
   margin-top: 100px;
 }
 
-.social a {
+footer .social a {
   margin: 20px 20px;
 }
 
@@ -7777,7 +7759,7 @@ footer {
   z-index: 99;
   padding: 15px;
   border: solid 1px #c9ab81;
-  border-radius: 50%;
+  border-radius: 60%;
 }
 
 #topBtn:hover {
