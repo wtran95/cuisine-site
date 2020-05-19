@@ -1,0 +1,27 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $phones) { 
+    .about {
+        padding: 0 2% 130px 2%;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $tablet) { 
+    .about {
+        padding: 0 10% 0px 10%;
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $laptop) { 
+    .about {
+        padding: 0 25% 70px 25%;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $desktop) { 
+    .about {
+        padding: 0 30% 50px 30%;
+    }
+ }

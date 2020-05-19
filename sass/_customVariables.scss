@@ -1,6 +1,6 @@
-//===========
-//  Color =
-//========
+//============
+//  Color ==
+//=========
 
 // Background color
 $primary-theme-color:#0b1315; 
@@ -11,21 +11,20 @@ $theme-font-color: #c9ab81;
 $border-box-color: #715b3e;
 $secondary-font-color: #fff;
 
-//===========
-//  Fonts =
-//========
-
-@font-face {
-    font-family: "Caviar Dreams Bold";
-    src: url(/fonts/CaviarDreams_Bold.ttf);
-}
-
-@font-face {
-    font-family: "Metropolis1920";
-    src: url(/fonts/Metropolis1920-Regular.ttf);
-}
+//============
+//  Fonts ==
+//=========
 
 $inspired-font: 'Miniver', cursive;
 $header-font: 'Caviar Dreams Bold';
 $description-font: 'Josefin Sans', sans-serif;
 $navbar-font: 'Open Sans Condensed', sans-serif;
+
+//============================
+//  Responsive breakpoints ==
+//==========================
+
+$phones: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;

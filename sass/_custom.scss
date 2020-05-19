@@ -1,93 +1,95 @@
-// ******************** BODY********************
-body {
-    background-color: $primary-theme-color;
-    font-size: $description-font;
-    font-size: 19px;
-    color: $secondary-font-color;
-    letter-spacing: 0;
-    text-transform: none;
-}
-
-// ********* Global *********
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $header-font;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $theme-font-color;
-}
-
-h1 {
-    font-size: 48px;
-    line-height: 1.27em;
-    letter-spacing: .22em;
-}
-
-h2 {
-    font-size: 41px;
-    line-height: 1.31em;
-    letter-spacing: .23em;
-}
-
-h5 {
-    font-size: 19px;
-    line-height: 1.52em;
-}
-
-.inspired {
-    font-family: $inspired-font;
-    color: $theme-font-color;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: .04em;
-    text-transform: none;
-    margin-bottom: 13px;
-}
-
-.top-title {
-    text-align: center;
-    padding-top: 50px;
-    margin: 40px auto;
-}
-
-.text-description {
-    font-family: $description-font;
-    font-size: 19px;
-    font-weight: 300;
-    letter-spacing: 0;
-    text-transform: none;
-    color: $secondary-font-color;
-}
-
+@import "./base";
+@import "./layout";
+@import "./mixins";
 // ******************** NAV BAR ********************
 
-.dropdown {
-    font-family: $navbar-font;
+header {
+    background-color: $primary-theme-color;
+    padding: 2rem 0;
 }
 
-.dropdown:hover > .dropdown-menu {
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Not display dot symbol
+nav ul {
+    list-style: none;
+}
+
+.navbar {
+    font-family: $navbar-font;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar > li, .navbar > a {
+    display: inline-block;
+}
+
+.navbar li{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: $secondary-font-color;
+    text-decoration: none;
+    padding: 10px 1.5em;
+    display: block;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+//Sub menu Level 1
+.sub-menu , .sub-menu2 {
+    position: absolute;
+    background-color: $primary-theme-color;
+    width: 254px;
+    padding: 36px 0 33px;
+    left: 0;
+    display: none;
+}
+
+.sub-menu {
+    z-index: 1;
+}
+
+.sub-menu a, .sub-menu2 a {
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 5px 33px 5px 38px;
+}
+
+.navbar li:hover > .sub-menu{
     display: block;
 }
 
-.submenu {
-    position: absolute;
+.navbar a:hover {
+    background-color: $theme-font-color;
+}
+
+//Sub menu Level 2
+.sub-menu2{
     left: 100%;
     top: 0;
-    display: none;
-    font-family: $navbar-font;
 }
 
-.dropdown:hover > .submenu {
+.navbar li:hover > .sub-menu2{
     display: block;
 }
+
 
 // ******************** ABOUT US ********************
 
 .about {
-    height: 200px;
-    width: 400px;
-    margin: 100px auto;
+    padding-top: 153px;
 }
 
 // ******************** ICONIC PICTURE ********************
@@ -117,10 +119,21 @@ h5 {
         align-items: center;
         justify-content: center;
 
+        .quotation-mark{
+            display: block;
+            margin: 0 auto;
+            width: 35px;
+            height: 33px;
+            background-image: url(/images/quote-mark.png);
+            background-repeat: no-repeat;
+        }
+
         //SLIDESHOW CONTAINER
         .slideshow-container {
+            margin-top: 36px;
             padding: 0 200px; //right here!
 
+            
             .slide-contents p:first-child {
                 font-family: $inspired-font;
                 font-weight: 400;
@@ -141,12 +154,6 @@ h5 {
                 margin: 0 5px;
                 display: inline-block;
             }
-        }
-
-        //QUOTATION MARK
-        p:first-child {
-            font-size: 5rem;
-            color: $theme-font-color;
         }
 
         //HOVER EFFECT
@@ -198,16 +205,6 @@ h5 {
             margin-bottom: 45px;
         }
 
-        // VIEW ALL BUTTON
-        button {
-            background-color: $primary-theme-color;
-            height: 50px;
-            width: 150px;
-            color: $secondary-font-color;
-            display: block;
-            margin: 0 auto;
-            border: solid 1px $theme-font-color;
-        }
     }
 }
 
@@ -220,32 +217,27 @@ h5 {
 
 }
 
-.menu > button {
-    background-color: $primary-theme-color;
-    height: 50px;
-    width: 150px;
-    color: $secondary-font-color;
-    display: block;
-    margin: 35px auto;
-    border: solid 1px $theme-font-color;
-}
 
-#menu-content {
+.menu-content {
     margin: 0;
 }
 
 .pricing-item {
-    padding: 10px;
+    margin-bottom: 37px;
 }
 
 .pricing-main {
     margin: 0;
 }
 
-.pricing-main > h6 {
-    display: inline-block;
-    font-size: 1.5rem;
+.pricing-main  h6 {
+    display: table-cell;
 }
+
+.pricing-price {
+    display: table-cell;
+}
+
 
 .pricing-price {
     float: right;
@@ -267,6 +259,11 @@ h5 {
     
 }
 
+.button-container {
+    padding-top: 35px;
+    padding-bottom: 160px;
+}
+
 // ******************** FOOD PHILOSOPHY ********************
 
 .food-philo {
@@ -278,14 +275,11 @@ h5 {
     max-width: 100%;
 }
 
-.button {
-    display: inline-block;
-    background-color: $primary-theme-color;
-    height: 50px;
-    width: 115px;
+.t-content .button {
+    line-height: 2.3em;
+    padding-bottom: 4px;
     border: none;
-    color: $secondary-font-color;
-    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .button:hover {
@@ -333,6 +327,7 @@ h5 {
 
 .form-wrap button {
     background-color: $secondary-theme-color;
+    font-family: $navbar-font;
     height: 50px;
     width: 150px;
     color: $secondary-font-color;
