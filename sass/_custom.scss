@@ -8,14 +8,6 @@ header {
     padding: 2rem 0;
 }
 
-nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 //Not display dot symbol
 nav ul {
     list-style: none;
@@ -23,13 +15,14 @@ nav ul {
 
 .navbar {
     font-family: $navbar-font;
+    overflow: hidden; // just added
     margin: 0;
     padding: 0;
 }
 
-.navbar > li, .navbar > a {
-    display: inline-block;
-}
+// .navbar > li, .navbar > a {
+//     display: inline-block;
+// }
 
 .navbar li{
     position: relative;
@@ -46,44 +39,37 @@ nav ul {
     line-height: 28px;
 }
 
-//Sub menu Level 1
-.sub-menu , .sub-menu2 {
-    position: absolute;
-    background-color: $primary-theme-color;
-    width: 254px;
-    padding: 36px 0 33px;
-    left: 0;
-    display: none;
+
+
+//Testing
+// .sub-menu2-left{
+//     position: absolute;
+//     background-color: $primary-theme-color;
+//     width: 254px;
+//     padding: 36px 0 33px;
+//     top: 0;
+//     right: 100%;
+//     display: none;
+// }
+    
+// .sub-menu2-left a {
+//     text-align: right;
+// }
+
+// .navbar li:hover > .sub-menu2-left{
+//     display: block;
+// }
+//
+
+//Phone Size Menu Dropdown
+
+.icon {
+    text-decoration: none;
+    color: #f2f2f2;
+    float: right;
+    text-align: center;
 }
 
-.sub-menu {
-    z-index: 1;
-}
-
-.sub-menu a, .sub-menu2 a {
-    display: block;
-    float: none;
-    margin: 0;
-    padding: 5px 33px 5px 38px;
-}
-
-.navbar li:hover > .sub-menu{
-    display: block;
-}
-
-.navbar a:hover {
-    background-color: $theme-font-color;
-}
-
-//Sub menu Level 2
-.sub-menu2{
-    left: 100%;
-    top: 0;
-}
-
-.navbar li:hover > .sub-menu2{
-    display: block;
-}
 
 
 // ******************** ABOUT US ********************

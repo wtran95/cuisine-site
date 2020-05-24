@@ -1,3 +1,53 @@
+//Dropdown navbar
+let lv1MenuItems = document.querySelectorAll(".nav-item");
+let lv2MenuItems = document.querySelectorAll(".nav-item2");
+
+let lv1subMenus = document.querySelectorAll(".sub-menu");
+let lv2subMenus = document.querySelectorAll(".sub-menu2");
+
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "navbar") {
+    x.className += " responsive";
+    } else {
+    x.className = "navbar";
+    closeDropdown();
+    }
+}
+
+for(let i = 0; i < lv1MenuItems.length; i++) {
+    lv1MenuItems[i].addEventListener('click', () => {
+        lv1MenuItems[i].nextElementSibling.classList.toggle("dropdown");
+        // for(let j = 0; j < lv2subMenus.length; j++){
+        // if(lv2subMenus[j].classList.contains("dropdown")){
+        //     lv2subMenus[j].classList.toggle("dropdown");
+        //     }   
+        // }
+
+    })
+}
+
+function closeDropdown(){
+    // Close level 1 Sub-menu Block
+    for(let i = 0; i < lv1subMenus.length; i++){
+        if(lv1subMenus[i].classList.contains("dropdown"))
+        {
+            lv1subMenus[i].classList.toggle("dropdown");
+        }
+
+    }
+    // Close level 2 Sub-menu Block
+    // for(let j = 0; j < lv2subMenus.length; j++){
+    //     if(lv2subMenus[j].classList.contains("dropdown")){
+    //         lv2subMenus[j].classList.toggle("dropdown");
+    //     }
+    // }
+
+}
+
+
+//Slide Content 
 var slideIndex = 1;
 showSlides(slideIndex);
 
