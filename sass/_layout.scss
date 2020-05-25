@@ -14,7 +14,7 @@
     .mobile-header{
         display: block;
     }
-
+    
     /* Display buger Icon on Right side */
     .icon {
         display: block;
@@ -80,28 +80,29 @@
 @media (min-width: $tablet) {
     .page-header{
         display: block;
+        width: 100%;
     }
+
     .mobile-header{
         display: none;
     }
     nav {
         max-width: 1100px;
         margin: 0 auto;
-        display: inline-block;
         width: 100%;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .navbar a:hover {
         background-color: $theme-font-color;
-    
+    }
     
     .navbar > li, .navbar > a {
         display: inline-block;
     }
-    .sub-menu {
-        z-index: 1;
+    .sub-menu, .sub-menu2 {
+        z-index: 2;
     }
     .sub-menu a, .sub-menu2 a {
         display: block;
@@ -132,11 +133,11 @@
     .navbar li:hover > .sub-menu2{
         display: block;
     }
+
     .about {
         padding: 0 10% 0px 10%;
     }
  }
-}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: $laptop) { 
@@ -146,7 +147,7 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: $desktop) { 
+@media (min-width: $desktop) {
     .about {
         padding: 0 30% 50px 30%;
     }
