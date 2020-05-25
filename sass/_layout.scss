@@ -7,11 +7,33 @@
 
 //Navbar will scale doww to dropdown list for the Tablet Size
 @media (max-width: $tablet) {
+    //Choose which header to dipslay
+    .page-header{
+        display: none;
+    }
+    .mobile-header{
+        display: block;
+    }
+
+    /* Display buger Icon on Right side */
+    .icon {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        padding: 1rem 16px;
+        text-decoration: none;
+        color: $secondary-font-color;
+    }
+
+    .icon:hover {
+        color: $theme-font-color;
+    }
+
     nav {
         margin: 0 auto;
         display: block;
     }
-
     //Change Nav Layout into Columm Block
     .navbar {
         display: block;
@@ -22,15 +44,12 @@
         display: none;
     }
 
-    /* Display buger Icon on Right side */
-    .icon {
-        display: block;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        padding: 1rem 16px;
+    //Background items enable when hover
+    .navbar a:hover{
+        background-color: $theme-font-color;
     }
 
+    //Effect Dropdown Enable
     .navbar.responsive {
         position: relative;
         padding: 0;
@@ -44,14 +63,13 @@
         text-align: left;
     }
 
-    /* .sub-menu2.dropdown  */
-    .sub-menu.dropdown{
+    .sub-menu.dropdown, .sub-menu2.dropdown{
         position: relative;
         padding-right: 15px;
         margin: 0;
     }
-    // , .sub-menu2.dropdown > li > a 
-    .sub-menu.dropdown > li > a{ 
+
+    .sub-menu.dropdown > li > a, .sub-menu2.dropdown > li > a{ 
         float: none;
         display: block;
         text-align: left;
@@ -60,38 +78,37 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: $tablet) {
-    .icon {
+    .page-header{
+        display: block;
+    }
+    .mobile-header{
         display: none;
     }
     nav {
         max-width: 1100px;
         margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
+        width: 100%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
     }
+    .navbar a:hover {
+        background-color: $theme-font-color;
+    
+    
     .navbar > li, .navbar > a {
         display: inline-block;
     }
     .sub-menu {
         z-index: 1;
     }
-    
     .sub-menu a, .sub-menu2 a {
         display: block;
         float: none;
         margin: 0;
         padding: 5px 33px 5px 38px;
     }
-    
-    .navbar li:hover > .sub-menu{
-        display: block;
-    }
-    
-    .navbar a:hover {
-        background-color: $theme-font-color;
-    }
-
     
     //Sub menu Level 1
     .sub-menu , .sub-menu2 {
@@ -102,6 +119,11 @@
         left: 0;
         display: none;
     }
+    
+    .navbar li:hover > .sub-menu{
+        display: block;
+    }
+    
     //Sub menu Level 2
     .sub-menu2{
         left: 100%;
@@ -114,17 +136,18 @@
         padding: 0 10% 0px 10%;
     }
  }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: $laptop) { 
     .about {
         padding: 0 25% 70px 25%;
     }
- }
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: $desktop) { 
     .about {
         padding: 0 30% 50px 30%;
     }
- }
+}
