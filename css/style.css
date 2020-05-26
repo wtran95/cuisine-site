@@ -7045,6 +7045,8 @@ a {
   }
   .navbar {
     display: block;
+    max-height: 250px;
+    overflow: auto;
   }
   /* Hiding menu items */
   .navbar li > a {

@@ -37,6 +37,8 @@
     //Change Nav Layout into Columm Block
     .navbar {
         display: block;
+        max-height: 250px;
+        overflow: auto;
     }
     
     /* Hiding menu items */
@@ -97,10 +99,12 @@
     .navbar a:hover {
         background-color: $theme-font-color;
     }
-    
+
+    //Display Nav-item inline-block
     .navbar > li, .navbar > a {
         display: inline-block;
     }
+
     .sub-menu, .sub-menu2 {
         z-index: 2;
     }
