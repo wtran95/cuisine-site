@@ -1,15 +1,32 @@
-- var menus = {HOME: ['Bar Home', 'Restaurant Home', 'Fine Dining'], PAGES: [], PORTFOLIO: [], BLOG: [], SHOPS: []}
+- var navBar = [ { name: "HOME", subMenu: [ "Bar Home", "Restaurant Home", "Fine Dining", "Screen Showcase", "Haute Cuisine", "Restaurant Menu", "Fullscreen Showcase", "Carousel Showcase", "Landing" ] }, { name: "PAGES", subMenu: [ "About Us", "Meet The Chef", "Our Chefs", "Our Menu", "Our Kitchen", "Gallery Page", "Booking Page", "Contact Us", "Coming Soon" ] }, { name: "PORTFOLIO", subMenu: [ { name: "Portfolio Types", subMenu1: [ "Gallery Portfolio", "Standard Portfolio", "Slider Portfolio" ] }, { name: "Portfolio Layout", subMenu1: [ "Two Col.", "Three Col.", "Three Col. Wide", "Four Col.", "Four Col. Wide", "Five Col. Wide", ] }, { name: "Portfolio Single", subMenu1: [ "Small Images", "Small Slider", "Large Slider", "Large Images", "Gallery", ] }, ] }, { name: "BLOG", subMenu: [ { name: "Blog Standard" }, { name: "Blog Left Sidebar" }, { name: "Blog No Sidebar" }, { name: "Blog Classic" }, { name: "Post Types", subMenu1: [ "Standard", "Quote", "Link", "Audio", "Video", "Gallery", "No Sidebar" ] } ] }, { name: "SHOP", subMenu: [ { name: "Product List" }, { name: "Product Single" }, { name: "Shop Layouts", subMenu1: [ "Three Col.", "Four Col.", "Full Width." ] }, { name: "Shop Pages", subMenu1: [ "My Account", "Checkout", "Cart" ] } ] }, ];
 
+mixin navbar-item(navItem)
+    li
+        a(href='#')= navItem.name
+        ul.sub-menu
+            each subMenuItem in navItem.subMenu
+                //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
+                if(typeof(subMenuItem)!=='object') 
+                    li
+                        a(href='#') #{subMenuItem}
+                else
+                    li
+                        a(href='#') #{subMenuItem.name}
+                            ul.sub-menu2
+                                if(subMenuItem.subMenu1)
+                                    each subMenu1Item in subMenuItem.subMenu1
+                                        li
+                                            a(href='#') #{subMenu1Item}
 
 header.page-header
     .container
         nav
             ul.navbar#topNav
-                each navItem in Object.keys(menus)
-                    - subMenu = menus[navItem]
-                    li
-                        a(href='#')= navItem
-                        ul.sub-menu
-                            each subMenuItem in subMenu
-                                li
-                                    a(href='#') #{subMenuItem}
+                for navItem in navBar
+                    +navbar-item(navItem)
+
+//- header.mobile-header
+//-     .container
+//-         #icon
+//-             a(href="javascript:void(0);", onclick="myFunction")(class="icon")
+        
