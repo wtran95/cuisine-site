@@ -1,0 +1,15 @@
+- var menus = {HOME: ['Bar Home', 'Restaurant Home', 'Fine Dining'], PAGES: [], PORTFOLIO: [], BLOG: [], SHOPS: []}
+
+
+header.page-header
+    .container
+        nav
+            ul.navbar#topNav
+                each navItem in Object.keys(menus)
+                    - subMenu = menus[navItem]
+                    li
+                        a(href='#')= navItem
+                        ul.sub-menu
+                            each subMenuItem in subMenu
+                                li
+                                    a(href='#') #{subMenuItem}
