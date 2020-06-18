@@ -7075,6 +7075,9 @@ a {
     display: block;
     text-align: left;
   }
+  .slideshow-container {
+    padding: 23% 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -7135,17 +7138,32 @@ a {
   .about {
     padding: 0 10% 0px 10%;
   }
+  .slideshow-container {
+    padding: 0 10%;
+  }
+  .slideshow-container .slideshow-holder {
+    padding: 0 10%;
+  }
 }
 
 @media (min-width: 992px) {
   .about {
     padding: 0 25% 70px 25%;
   }
+  .slideshow-container {
+    padding: 23% 0% 23%  15%;
+  }
 }
 
 @media (min-width: 1200px) {
   .about {
     padding: 0 30% 50px 30%;
+  }
+  .slideshow-container {
+    padding: 23% 0% 23%  4%;
+  }
+  .slideshow-container .slideshow-holder {
+    padding: 0 165px;
   }
 }
 
@@ -7214,18 +7232,13 @@ nav ul {
           justify-content: center;
 }
 
-#rating .mySlide .quotation-mark {
+#rating .mySlide .slideshow-container .quotation-mark {
   display: block;
   margin: 0 auto;
   width: 35px;
   height: 33px;
   background-image: url(/images/quote-mark.png);
   background-repeat: no-repeat;
-}
-
-#rating .mySlide .slideshow-container {
-  margin-top: 36px;
-  padding: 0 200px;
 }
 
 #rating .mySlide .slideshow-container .slide-contents p:first-child {
@@ -7235,14 +7248,15 @@ nav ul {
   color: #afb8b8;
   font-size: 22px;
   line-height: 39px;
+  margin-top: 36px;
 }
 
-#rating .mySlide .num-container {
+#rating .mySlide .slideshow-container .num-container {
   text-align: center;
   padding: 20px;
 }
 
-#rating .mySlide .num-container .num {
+#rating .mySlide .slideshow-container .num-container .num {
   cursor: pointer;
   margin: 0 5px;
   display: inline-block;
@@ -7258,13 +7272,7 @@ nav ul {
   background-image: url(/images/main-img-4.jpg);
   background-position: center;
   background-size: cover;
-  height: 85vh;
-}
-
-@media only screen and (max-width: 1440px) {
-  #rating .mySlide .slideshow-container {
-    padding: 0 10%;
-  }
+  max-width: 100%;
 }
 
 .recommendation {
@@ -7302,29 +7310,27 @@ nav ul {
   margin: 0;
 }
 
-.pricing-main h6 {
-  display: table-cell;
-}
-
-.pricing-price {
-  display: table-cell;
+.pricing-title {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 400;
 }
 
 .pricing-price {
   float: right;
   font-family: "Caviar Dreams Bold";
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 19px;
   line-height: inherit;
   color: #c9ab81;
 }
 
-.pricing-desc > p {
-  display: inline-block;
+.pricing-desc {
   font-family: "Josefin Sans", sans-serif;
   font-size: 19px;
   font-weight: 300;
   letter-spacing: 0;
+  margin-top: 4px;
   text-transform: none;
   color: #fff;
 }

@@ -64,22 +64,22 @@ nav ul {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        // height: 75vh;
 
-        .quotation-mark{
-            display: block;
-            margin: 0 auto;
-            width: 35px;
-            height: 33px;
-            background-image: url(/images/quote-mark.png);
-            background-repeat: no-repeat;
-        }
+        
 
         //SLIDESHOW CONTAINER
         .slideshow-container {
-            margin-top: 36px;
-            padding: 0 200px; //right here!
-
             
+            .quotation-mark{
+                display: block;
+                margin: 0 auto;
+                width: 35px;
+                height: 33px;
+                background-image: url(/images/quote-mark.png);
+                background-repeat: no-repeat;
+            }
+
             .slide-contents p:first-child {
                 font-family: $inspired-font;
                 font-weight: 400;
@@ -87,21 +87,24 @@ nav ul {
                 color: #afb8b8;
                 font-size: 22px;
                 line-height: 39px;
+                margin-top: 36px;
             }
-        }
 
-        //NUMBER CONTAINER
-        .num-container {
-            text-align: center;
-            padding: 20px;
-
-            .num {
-                cursor: pointer;
-                margin: 0 5px;
-                display: inline-block;
+            //NUMBER CONTAINER
+            .num-container {
+                text-align: center;
+                padding: 20px;
+                
+                .num {
+                    cursor: pointer;
+                    margin: 0 5px;
+                    display: inline-block;
+                }
             }
-        }
 
+            
+        }
+        
         //HOVER EFFECT
         .active, .num:hover {
             color: $theme-font-color;
@@ -115,23 +118,10 @@ nav ul {
         background-image: url(/images/main-img-4.jpg);
         background-position: center;
         background-size: cover;
-        height: 85vh;
+        max-width: 100%;
+        
     }
 }
-
-
-//Testing Purpose
-@media only screen and (max-width: 1440px){
-    #rating .mySlide .slideshow-container {
-        padding: 0 10%;
-    }
-
-    // .food-philo .t-content {
-    //     padding: 0 15%;
-    // }
-}
-
-
 
 // ******************** RECOMMENDATION ********************
 
@@ -163,7 +153,6 @@ nav ul {
 
 }
 
-
 .menu-content {
     margin: 0;
 }
@@ -176,30 +165,27 @@ nav ul {
     margin: 0;
 }
 
-.pricing-main  h6 {
-    display: table-cell;
+.pricing-title{
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 400;
 }
-
-.pricing-price {
-    display: table-cell;
-}
-
 
 .pricing-price {
     float: right;
     font-family: $header-font;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 19px;
     line-height: inherit;
     color: $theme-font-color;
 }
 
-.pricing-desc > p {
-    display: inline-block;
+.pricing-desc {
     font-family: $description-font;
     font-size: 19px;
     font-weight: 300;
     letter-spacing: 0;
+    margin-top: 4px;
     text-transform: none;
     color: $secondary-font-color;
     

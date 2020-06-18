@@ -76,6 +76,11 @@
         display: block;
         text-align: left;
     }
+
+    //RATING
+    .slideshow-container {
+        padding: 23% 0;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -141,6 +146,16 @@
     .about {
         padding: 0 10% 0px 10%;
     }
+
+    //RATING
+    .slideshow-container {
+        padding: 0 10%;
+
+        .slideshow-holder{
+            padding: 0 10%;
+        }
+    }
+    
  }
 
 // Large devices (desktops, 992px and up)
@@ -148,11 +163,26 @@
     .about {
         padding: 0 25% 70px 25%;
     }
+    .slideshow-container {
+        padding: 23% 0% 23%  15%;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: $desktop) {
+    
+
+    // .food-philo .t-content {
+    //     padding: 0 15%;
+    // }
     .about {
         padding: 0 30% 50px 30%;
+    }
+
+    .slideshow-container {
+        padding: 23% 0% 23%  4%;
+        .slideshow-holder{
+            padding: 0 165px;
+        }
     }
 }
