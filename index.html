@@ -7,7 +7,7 @@
     <title>Food Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Miniver&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -130,7 +130,6 @@
                 </ul>
             </nav>
         </div>
-        
     </header>
 
     <!-- ******************** MOBILE NAV BAR  ******************** -->
@@ -270,13 +269,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="/images/main-h-new-rev-img-1.jpg" alt="First slide">
+                    <img class="d-block w-100" src="assets/images/main-h-new-rev-img-1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/images/main-h-new-rev-img-2.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="assets/images/main-h-new-rev-img-2.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/images/main-h-new-rev-img-3.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="assets/images/main-h-new-rev-img-3.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -304,9 +303,9 @@
             <!-- ******************** ICONIC PICTURE ******************** -->
 
             <div id="iconic-pic" class="row justify-content-around">
-                <div class="col-md-4 text-center"><img src="./images/main-img-1.jpg" alt="main-image-1"></div>
+                <div class="col-md-4 text-center"><img src="assets/images/main-img-1.jpg" alt="main-image-1"></div>
                 <div class="col-md-4 text-center"></div> <!-- SVG -->
-                <div class="col-md-4 text-center"><img src="./images/main-img-2.jpg" alt="main-image-2">
+                <div class="col-md-4 text-center"><img src="assets/images/main-img-2.jpg" alt="main-image-2">
                 </div>
             </div>
         </div>
@@ -316,36 +315,39 @@
 
         <div id="rating" class="row">
             <div class="mySlide col-md-6 text-center">
-                <div class="quotation-mark"></div>
                 <div class="slideshow-container">
-                    <div class="slide-contents">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisic sed do eiusmod tempor incididunt ut
-                            labore
-                            et
-                            dolore magna aliqua ut enim ad.</p>
-                        <h5>Robert Chang</h5>
-                        <p class="text-description">Sommelier</p>
-                    </div>
-                    <div class="slide-contents">
-                        <p>
-                            Ut enim ad minim venia orem ipsum dolor sit amet, consectetur adipisic sed do. Eiusmod
-                            tempor incididunt ut labore et dolore magna.
-                        </p>
-                        <h5>Jan Winsent</h5>
-                        <p class="text-description">Cook</p>
-                    </div>
-                    <div class="slide-contents">
-                        <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia orem
-                            ipsum dolor sit amet, consectetur.</p>
-                        <h5>Andrea Chung</h5>
-                        <p class="text-description">Cook</p>
+                    <div class="slideshow-holder">
+                        <div class="quotation-mark"></div>
+                        <div class="slide-contents">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisic sed do eiusmod tempor incididunt ut
+                                labore
+                                et
+                                dolore magna aliqua ut enim ad.</p>
+                            <h5>Robert Chang</h5>
+                            <p class="text-description">Sommelier</p>
+                        </div>
+                        <div class="slide-contents">
+                            <p>
+                                Ut enim ad minim venia orem ipsum dolor sit amet, consectetur adipisic sed do. Eiusmod
+                                tempor incididunt ut labore et dolore magna.
+                            </p>
+                            <h5>Jan Winsent</h5>
+                            <p class="text-description">Cook</p>
+                        </div>
+                        <div class="slide-contents">
+                            <p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia orem
+                                ipsum dolor sit amet, consectetur.</p>
+                            <h5>Andrea Chung</h5>
+                            <p class="text-description">Cook</p>
+                        </div>
+                        <div class="num-container">
+                            <span class="num" onclick="currentSlide(1)">1</span>
+                            <span class="num" onclick="currentSlide(2)">2</span>
+                            <span class="num" onclick="currentSlide(3)">3</span>
+                        </div>
                     </div>
                 </div>
-                <div class="num-container">
-                    <span class="num" onclick="currentSlide(1)">1</span>
-                    <span class="num" onclick="currentSlide(2)">2</span>
-                    <span class="num" onclick="currentSlide(3)">3</span>
-                </div>
+                
             </div>
             <div id="rating-pic" class="col-md-6"></div>
         </div>
@@ -354,7 +356,7 @@
         <div class="container">
             <div class="recommendation row align-items-center justify-content-center">
                 <div class="col-md-6">
-                    <img src="/images/main-img-5.jpg" alt="main-img-5">
+                    <img src="assets/images/main-img-5.jpg" alt="main-img-5">
                 </div>
                 <div id="r-content" class="col-md-6 text-center">
                     <span class="inspired">Recommedations</span>
@@ -383,45 +385,35 @@
                                     <h6 class="pricing-title">Beef burger meal </h6>
                                     <span class="pricing-price">$32</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Classic greek salad, barrel aged feta cheese, bread</p>
-                                </div>
+                                <p class="pricing-desc">Classic greek salad, barrel aged feta cheese, bread</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Roasted Lamb Rump</h6>
                                     <span class="pricing-price">$25</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Grilled lamb cutlets, pomegranate glaze, butternut squash</p>
-                                </div>
+                                <p class="pricing-desc">Grilled lamb cutlets, pomegranate glaze, butternut squash</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Pan Seared Sea Bass</h6>
                                     <span class="pricing-price">$38</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Saffron and mussel’s broth, new potatoes, edamame beans</p>
-                                </div>
+                                <p class="pricing-desc">Saffron and mussel’s broth, new potatoes, edamame beans</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">King Prawns And Lobster</h6>
                                     <span class="pricing-price">$38</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Creamy saffron, sauce Vierge</p>
-                                </div>
+                                <p class="pricing-desc">Creamy saffron, sauce Vierge</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Citrus Cured Salmon</h6>
                                     <span class="pricing-price">$41</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Horseradish creme fraiche, beetroot mousse, oil</p>
-                                </div>
+                                <p class="pricing-desc">Horseradish creme fraiche, beetroot mousse, oil</p>
                             </div>
                         </div>
                     </div>
@@ -434,45 +426,35 @@
                                     <h6 class="pricing-title">Pan Seared Scallops</h6>
                                     <span class="pricing-price">$29</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Saffron, celeriac puree, black pudding, olive oil</p>
-                                </div>
+                                <p class="pricing-desc">Saffron, celeriac puree, black pudding, olive oil</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Baked Camembert</h6>
                                     <span class="pricing-price">$25</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Red onion marmelade, garlic Foccacia bread, grilled figs</p>
-                                </div>
+                                <p class="pricing-desc">Red onion marmelade, garlic Foccacia bread, grilled figs</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Braised Ox Cheek Ravioli</h6>
                                     <span class="pricing-price">$23</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Mediterranean olives casserole, celeriac puree, mushrooms</p>
-                                </div>
+                                <p class="pricing-desc">Mediterranean olives casserole, celeriac puree, mushrooms</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Corn Fed Chicken</h6>
                                     <span class="pricing-price">$17</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Wild mushrooms, truffle potatoes, braised leeks, carrots</p>
-                                </div>
+                                <p class="pricing-desc">Wild mushrooms, truffle potatoes, braised leeks, carrots</p>
                             </div>
                             <div class="pricing-item">
                                 <div class="pricing-main">
                                     <h6 class="pricing-title">Nduja Pork Chicken Terrine</h6>
                                     <span class="pricing-price">$41</span>
                                 </div>
-                                <div class="pricing-desc">
-                                    <p>Smoked duck breast, pistachio, smoked pancetta</p>
-                                </div>
+                                <p class="pricing-desc">Smoked duck breast, pistachio, smoked pancetta</p>
                             </div>
                         </div>
                     </div>
@@ -489,10 +471,10 @@
         <div class="container">
             <div class="food-philo row align-items-center">
                 <div class="tips-pic col-md-4 text-center">
-                    <img src="/images/main-img-6.jpg" alt="main-img-6">
+                    <img src="assets/images/main-img-6.jpg" alt="main-img-6">
                 </div>
                 <div class="tips-pic col-md-4 text-center">
-                    <img src="/images/main-img-8.jpg" alt="main-img-8">
+                    <img src="assets/images/main-img-8.jpg" alt="main-img-8">
                 </div>
                 <div class="t-content col-md-4 text-center">
                     <span class="inspired">Our food philosophy</span>
@@ -519,21 +501,21 @@
         <div class="container">
             <div class="menu-order d-flex aligns-items-center flex-sm-column flex-md-row">
                 <div class="order-wrapper text-center">
-                    <img src="/images/main-images-1.jpg" alt="main-images-1">
+                    <img src="assets/images/main-images-1.jpg" alt="main-images-1">
                     <div class="text-order-wrapper">
                         <h5>Starters</h5>
                         <a href="#">Specialties</a>
                     </div>
                 </div>
                 <div class="order-wrapper text-center">
-                    <img src="/images/main-images-2.jpg" alt="main-images-2">
+                    <img src="assets/images/main-images-2.jpg" alt="main-images-2">
                     <div class="text-order-wrapper">
                         <h5>Main Courses</h5>
                         <a href="#">Specialties</a>
                     </div>
                 </div>
                 <div class="order-wrapper text-center">
-                    <img src="/images/main-images-3.jpg" alt="main-images-3">
+                    <img src="assets/images/main-images-3.jpg" alt="main-images-3">
                     <div class="text-order-wrapper">
                         <h5>Desserts</h5>
                         <a href="#">Specialties</a>
@@ -633,10 +615,12 @@
     </footer>
     <button id="topBtn" title="Go to top">&#8593;</button>
 
-    <script src="js/custom.js"></script>
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+    
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/jquery.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
