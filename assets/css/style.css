@@ -7237,7 +7237,7 @@ nav ul {
   margin: 0 auto;
   width: 35px;
   height: 33px;
-  background-image: url(/images/quote-mark.png);
+  background-image: url(/assets/images/quote-mark.png);
   background-repeat: no-repeat;
 }
 
@@ -7269,7 +7269,7 @@ nav ul {
 }
 
 #rating #rating-pic {
-  background-image: url(/images/main-img-4.jpg);
+  background-image: url(/assets/images/main-img-4.jpg);
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -7361,7 +7361,7 @@ nav ul {
 }
 
 .p-img {
-  background-image: url(/images/main-background-5.jpg);
+  background-image: url(/assets/images/main-background-5.jpg);
   min-height: 600px;
   position: relative;
   background-position: center;
