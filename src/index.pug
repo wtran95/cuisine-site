@@ -28,85 +28,144 @@ block content
                 span.pricing-price= menuItem.price
             p.pricing-desc= menuItem.desc
 
-    //- ******************** SLIDE PICTURE ********************
-    #carouselExampleIndicators(class="carousel slide", data-ride="carousel")
-        ol.carousel-indicators
-            each val in [0, 1, 2]
-                if(val === 0)
-                    li(data-target="#carouselExampleIndicators",data-slide-to=""+ val,class="active")
-                else
-                    li(data-target="#carouselExampleIndicators",data-slide-to=""+ val)
-        .carousel-inner
-            each val, key in {1: 'First', 2: 'Second', 3: 'Third'}
-                if(key === "1")
-                    .carousel-item.active
-                        img(class="d-block w-100",src="assets/images/main-h-new-rev-img-"+ key +".jpg", alt=val + " slide")
-                else
-                    .carousel-item
-                        img(class="d-block w-100",src="assets/images/main-h-new-rev-img-"+ key +".jpg", alt=val + " slide")
-        +carousel-control('prev','Previous')
-        +carousel-control('next','Next')
+    - var orders = ["Starters", "Main Courses", "Desserts"];
+    main
+        //- ******************** SLIDE PICTURE ********************
+        #carouselExampleIndicators(class="carousel slide", data-ride="carousel")
+            ol.carousel-indicators
+                each val in [0, 1, 2]
+                    if(val === 0)
+                        li(data-target="#carouselExampleIndicators",data-slide-to=""+ val,class="active")
+                    else
+                        li(data-target="#carouselExampleIndicators",data-slide-to=""+ val)
+            .carousel-inner
+                each val, key in {1: 'First', 2: 'Second', 3: 'Third'}
+                    if(key === "1")
+                        .carousel-item.active
+                            img(class="d-block w-100",src="assets/images/main-h-new-rev-img-"+ key +".jpg", alt=val + " slide")
+                    else
+                        .carousel-item
+                            img(class="d-block w-100",src="assets/images/main-h-new-rev-img-"+ key +".jpg", alt=val + " slide")
+            +carousel-control('prev','Previous')
+            +carousel-control('next','Next')
 
-    //- ********************  ABOUT US (STORY)********************
-    .container
-        .about.text-center
-            span.inspired Our story
-            h1 ABOUT US
-            p.text-description
-               | Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu sm od tempor
-               | incididunt ut abore et dolore mag aliqua. Ut enim ad 
-
-        //- ******************** ICONIC PICTURE ********************
-        #iconic-pic(class="row justify-content-around")
-            +iconic-pic(1)
-            .col-md-4.text-center
-            +iconic-pic(2)
-
-    //- ******************** RATING *******************
-    #rating.row
-        .mySlide.col-md-6.text-center
-            .slideshow-container
-                .slideshow-holder
-                    .quotation-mark
-                    for slideCard in slides
-                        +slide-contents(slideCard)
-                    .num-container
-                        each val in [1, 2, 3]
-                            span(class="num", onclick=`currentSlide(${val})`)= val
-        .rating-pic#cold-md-6
-
-    //- ******************** RECOMMENDATION ********************
-    .container
-        .recommendation.row.align-items-center.justify-content-center
-            .col-md-6
-                img(src="assets/images/main-img-5.jpg", alt="main-img-5")
-            #r-content.col-md-6.text-center
-                span.inspired Recommendations
-                h2 Our best specialties
-                p.text-description 
-                        |Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu smotem por incididunt ut
-                        |abore et dolore magali qua. Ut enim ad minm eni amquis nostrud exercitation.
-
-                a.button(href='#') view all
-
-    //- ******************** MENU CONTENT ********************
-    .menu
+        //- ********************  ABOUT US (STORY)********************
         .container
-            .top-title
-                span.inspired special selection
-                h1 FROM OUR MENU
-            .menu-content.row
-                //- ************************* LEFT SIDE ****************************
-                .item-inner.col-md-6
-                    .pricing-holder.d-flex.flex-column
-                        each menuItem, key in menus
-                            if(key < 5)
-                                +pricing-item(menuItem)
-                //- ************************* RIGHT SIDE ****************************
-                .item-inner.col-md-6
-                    .pricing-holder.d-flex.flex-column
-                        each menuItem, key in menus
-                            if(key >= 5)
-                                +pricing-item(menuItem)
+            .about.text-center
+                span.inspired Our story
+                h1 ABOUT US
+                p.text-description
+                | Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu sm od tempor
+                | incididunt ut abore et dolore mag aliqua. Ut enim ad 
 
-    
+            //- ******************** ICONIC PICTURE ********************
+            #iconic-pic(class="row justify-content-around")
+                +iconic-pic(1)
+                .col-md-4.text-center
+                +iconic-pic(2)
+
+        //- ******************** RATING *******************
+        #rating.row
+            .mySlide.col-md-6.text-center
+                .slideshow-container
+                    .slideshow-holder
+                        .quotation-mark
+                        for slideCard in slides
+                            +slide-contents(slideCard)
+                        .num-container
+                            each val in [1, 2, 3]
+                                span(class="num", onclick=`currentSlide(${val})`)= val
+            .rating-pic#cold-md-6
+
+        //- ******************** RECOMMENDATION ********************
+        .container
+            .recommendation.row.align-items-center.justify-content-center
+                .col-md-6
+                    img(src="assets/images/main-img-5.jpg", alt="main-img-5")
+                #r-content.col-md-6.text-center
+                    span.inspired Recommendations
+                    h2 Our best specialties
+                    p.text-description 
+                            |Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu smotem por incididunt ut
+                            |abore et dolore magali qua. Ut enim ad minm eni amquis nostrud exercitation.
+
+                    a.button(href='#') view all
+
+        //- ******************** MENU CONTENT ********************
+        .menu
+            .container
+                .top-title
+                    span.inspired special selection
+                    h1 FROM OUR MENU
+                .menu-content.row
+                    //- ***************** LEFT SIDE ********************
+                    .item-inner.col-md-6
+                        .pricing-holder.d-flex.flex-column
+                            each menuItem, key in menus
+                                if(key < 5)
+                                    +pricing-item(menuItem)
+                    //- ***************** RIGHT SIDE *******************
+                    .item-inner.col-md-6
+                        .pricing-holder.d-flex.flex-column
+                            each menuItem, key in menus
+                                if(key >= 5)
+                                    +pricing-item(menuItem)
+
+        //- ******************** Food philosophy ********************
+        .container
+            .food-philo.row.align-items-center
+                .tips-pic.col-md-4.text-center
+                    img(src="assets/images/main-img-6.jpg", alt="main-img-6")
+                .tips-pic.col-md-4.text-center
+                    img(src="assets/images/main-img-8.jpg", alt="main-img-8")
+                .t-content.col-md-4.text-center
+                    span.inspired Our food philosophy
+                    h2 Our tips
+                    p.text-description 
+                        |Lorem ipsum dolor sit amet, consectet nei ad icing eli sed do eiu sm od tempor se incidid sens ne utabor et dolore magiqua. Ut enim ad miains eniam quis nostrudas exercitation ullam de cm laborisnw si utali
+                    a.button(href='#') Read more
+
+        //- ******************** PARALLAX EFFECT ********************
+        .p-img
+
+        //- ********************  MENU MEAL ORDER ********************
+        .top-title
+            span.inspired Laurent’s tasty offer
+            h1 Our Menu
+        .container
+            .menu-order.d-flex.aligns-items-center.flex-sm-column.flex-md-row
+                    each mealOrder, key in orders
+                        .order-wrapper.text-center
+                            img(scr=`assets/images/main-images-${key + 1}.jpg`, alt=`main-images-${key + 1}`)
+                            .text-order-wrapper
+                                h5= mealOrder
+                                a(href='#') Specialties
+        //- ******************** BOOK A TABLE ********************
+        .reservation
+            .container
+                .top-title
+                    span.inspired Reservations
+                    h1 BOOK A TABLE
+                form(action="")
+                    .form-wrap.d-flex.align-items-center.justify-content-md-around.flex-sm-column.flex-md-row
+                        .box
+                            select#person(name="person")
+                                - for (var i = 1; i <=20; i++) {
+                                    option(value=`${i}`) #{`${i} People`}
+                                -}
+                        #date
+                            input#date-book(type="date")
+                        .box
+                            select#time(name="time")
+                                - for (var i = 7; i <=11; i++) {
+                                    - for( var j = 0; j <= 30; j+=30) {
+                                        if(j === 0)
+                                            option(value=`${i}:${j}${j}`) #{`${i}:${j}${j} pm`}
+                                        else
+                                            option(value=`${i}:${j}`) #{`${i}:${j} pm`}
+                                    -}
+                                -}
+                        div
+                            button(type="submit") BOOK NOW
+        
+                            
