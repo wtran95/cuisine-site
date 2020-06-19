@@ -1,23 +1,15 @@
-<footer>
-    <div class="footer-wrap">
-        <div class="info text-center">
-            <p>
-                |Laurent Restaurant & Fine dining,
-                <a href="#">71 Madison Ave</a>
-            </p>
-            <p>
-                |10013 New York,
-                <a href="tel:914-309-7030">914-309-7030</a>,
-                <a href="mailto:nam@email.com">reservations@laurent.com</a>
-            </p>
-            <p>
-                |Open: 09:00 am – 01:00 pm
-            </p>
-        </div>
-        <div class="social d-flex align-items-center justify-content-center flex-md-row">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Trip Advisor</a>
-        </div>
-    </div>
-    </footer>
+- var contacts = ["Facebook", "Instagram", "Trip Advisor"];
+
+footer
+    .footer-wrap
+        .info.text-center
+            p Laurent Restaurant & Fine dining,
+                a(href="#") 71 Madison Ave
+            p 10013 New York,
+                a(href="tel:914-309-7030") 914-309-7030
+                a(href="mailto:nam@email.com") reservations@laurent.com
+            p Open: 09:00 am – 01:00 pm
+        .social.d-flex.align-items-center.justify-content-center.flex-md-row
+            each val in contacts
+                a(href="#")= val
+button#topBtn(title="Go to top") &#8593;

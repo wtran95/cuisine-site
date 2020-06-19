@@ -1,40 +1,30 @@
 - var navBar = [ { name: "HOME", subMenu: [ "Bar Home", "Restaurant Home", "Fine Dining", "Screen Showcase", "Haute Cuisine", "Restaurant Menu", "Fullscreen Showcase", "Carousel Showcase", "Landing" ] }, { name: "PAGES", subMenu: [ "About Us", "Meet The Chef", "Our Chefs", "Our Menu", "Our Kitchen", "Gallery Page", "Booking Page", "Contact Us", "Coming Soon" ] }, { name: "PORTFOLIO", subMenu: [ { name: "Portfolio Types", subMenu1: [ "Gallery Portfolio", "Standard Portfolio", "Slider Portfolio" ] }, { name: "Portfolio Layout", subMenu1: [ "Two Col.", "Three Col.", "Three Col. Wide", "Four Col.", "Four Col. Wide", "Five Col. Wide", ] }, { name: "Portfolio Single", subMenu1: [ "Small Images", "Small Slider", "Large Slider", "Large Images", "Gallery", ] }, ] }, { name: "BLOG", subMenu: [ { name: "Blog Standard" }, { name: "Blog Left Sidebar" }, { name: "Blog No Sidebar" }, { name: "Blog Classic" }, { name: "Post Types", subMenu1: [ "Standard", "Quote", "Link", "Audio", "Video", "Gallery", "No Sidebar" ] } ] }, { name: "SHOP", subMenu: [ { name: "Product List" }, { name: "Product Single" }, { name: "Shop Layouts", subMenu1: [ "Three Col.", "Four Col.", "Full Width." ] }, { name: "Shop Pages", subMenu1: [ "My Account", "Checkout", "Cart" ] } ] }, ];
 - let mobile;
 
+mixin sub-menu(navItem)
+    ul.sub-menu
+        each subMenuItem in navItem.subMenu
+            //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
+            if(typeof(subMenuItem)!=='object')
+                li
+                    a(href='#') #{subMenuItem}
+            else
+                li
+                    a(href='#') #{subMenuItem.name}
+                    ul.sub-menu2
+                        if(subMenuItem.subMenu1)
+                            each subMenu1Item in subMenuItem.subMenu1
+                                li
+                                    a(href='#') #{subMenu1Item}
+
 mixin navbar-item(navItem, mobile)
     li
         if(!mobile)
             a(href='#')= navItem.name
-            ul.sub-menu
-                each subMenuItem in navItem.subMenu
-                    //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
-                    if(typeof(subMenuItem)!=='object')
-                        li
-                            a(href='#') #{subMenuItem}
-                    else
-                        li
-                            a(href='#') #{subMenuItem.name}
-                            ul.sub-menu2
-                                if(subMenuItem.subMenu1)
-                                    each subMenu1Item in subMenuItem.subMenu1
-                                        li
-                                            a(href='#') #{subMenu1Item}
+            +sub-menu(navItem)
         else
             a.nav-item(href='#')= navItem.name
-            ul.sub-menu
-                each subMenuItem in navItem.subMenu
-                    //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
-                    if(typeof(subMenuItem)!=='object')
-                        li
-                            a(href='#') #{subMenuItem}
-                    else
-                        li
-                            a(href='#') #{subMenuItem.name}
-                            ul.sub-menu2
-                                if(subMenuItem.subMenu1)
-                                    each subMenu1Item in subMenuItem.subMenu1
-                                        li
-                                            a(href='#') #{subMenu1Item}
+            +sub-menu(navItem)
 
 header.page-header
     .container
