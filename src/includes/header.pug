@@ -6,17 +6,17 @@ mixin navbar-item(navItem)
         ul.sub-menu
             each subMenuItem in navItem.subMenu
                 //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
-                if(typeof(subMenuItem)!=='object') 
+                if(typeof(subMenuItem)!=='object')
                     li
                         a(href='#') #{subMenuItem}
                 else
                     li
                         a(href='#') #{subMenuItem.name}
-                            ul.sub-menu2
-                                if(subMenuItem.subMenu1)
-                                    each subMenu1Item in subMenuItem.subMenu1
-                                        li
-                                            a(href='#') #{subMenu1Item}
+                        ul.sub-menu2
+                            if(subMenuItem.subMenu1)
+                                each subMenu1Item in subMenuItem.subMenu1
+                                    li
+                                        a(href='#') #{subMenu1Item}
 
 header.page-header
     .container
@@ -29,4 +29,8 @@ header.page-header
 //-     .container
 //-         #icon
 //-             a(href="javascript:void(0);", onclick="myFunction")(class="icon")
+//-         nav
+//-             ul.navbar#topMobileNav
+//-                 for navItem in navBar
+//-                     +navbar-item(navItem,- var mobile = true)
         

@@ -1,4 +1,112 @@
 extends layout
 
 block content
-    h1 Hello This is Index.Pug
+
+    mixin carousel-control(acr,dir)
+        a(class=`carousel-control-${acr}`, href="#carouselExampleIndicators", role="button",data-slide=acr)
+            span(class=`carousel-control-${acr}-icon`, aria-hidden="true")
+            span(class="sr-only")= dir
+
+    mixin iconic-pic(num)
+        .col-md-4.text-center
+            img(src=`assets/images/main-img-${num}.jpg`, alt=`main-image-${num}`)
+
+    - var slides = [ { content: "Lorem ipsum dolor sit amet, consectetur adipisic sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad.", author: "Robert Chang", position: "Sommelier" }, { content: "Ut enim ad minim venia orem ipsum dolor sit amet, consectetur adipisic sed do. Eiusmod tempor incididunt ut labore et dolore magna.", author: "Jan Winsent", position: "Cook" }, { content: "Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia orem ipsum dolor sit amet, consectetur.", author: "Andrea Chung", position: "Cook" }, ];
+
+    mixin slide-contents(slideCard)
+        .slide-contents
+            p= slideCard.content
+            h5= slideCard.author
+            p.text-description= slideCard.position
+
+    - var menus = [ { title: "Beef burger meal", price: "$32", desc: "Classic greek salad, barrel aged feta cheese, bread" }, { title: "Roasted Lamb Rump", price: "$25", desc: "Grilled lamb cutlets, pomegranate glaze, butternut squash" }, { title: "Pan Seared Sea Bass", price: "$38", desc: "Saffron and mussel’s broth, new potatoes, edamame beans" }, { title: "King Prawns And Lobster", price: "$38", desc: "Creamy saffron, sauce Vierge" }, { title: "Citrus Cured Salmon", price: "$41", desc: "Horseradish creme fraiche, beetroot mousse, oil" }, { title: "Pan Seared Scallops", price: "$29", desc: "Saffron, celeriac puree, black pudding, olive oil" }, { title: "Baked Camembert", price: "$25", desc: "Red onion marmelade, garlic Foccacia bread, grilled figs" }, { title: "Braised Ox Cheek Ravioli", price: "$23", desc: "Mediterranean olives casserole, celeriac puree, mushrooms" }, { title: "Corn Fed Chicken", price: "$17", desc: "Wild mushrooms, truffle potatoes, braised leeks, carrots" }, { title: "Nduja Pork Chicken Terrine", price: "$41", desc: "Smoked duck breast, pistachio, smoked pancetta" } ];
+
+    mixin pricing-item(menuItem)
+        .pricing-item
+            .pricing-main
+                h6.pricing-title= menuItem.title
+                span.pricing-price= menuItem.price
+            p.pricing-desc= menuItem.desc
+
+    //- ******************** SLIDE PICTURE ********************
+    #carouselExampleIndicators(class="carousel slide", data-ride="carousel")
+        ol.carousel-indicators
+            each val in [0, 1, 2]
+                if(val === 0)
+                    li(data-target="#carouselExampleIndicators",data-slide-to=""+ val,class="active")
+                else
+                    li(data-target="#carouselExampleIndicators",data-slide-to=""+ val)
+        .carousel-inner
+            each val, key in {1: 'First', 2: 'Second', 3: 'Third'}
+                if(key === "1")
+                    .carousel-item.active
+                        img(class="d-block w-100",src="assets/images/main-h-new-rev-img-"+ key +".jpg", alt=val + " slide")
+                else
+                    .carousel-item
+                        img(class="d-block w-100",src="assets/images/main-h-new-rev-img-"+ key +".jpg", alt=val + " slide")
+        +carousel-control('prev','Previous')
+        +carousel-control('next','Next')
+
+    //- ********************  ABOUT US (STORY)********************
+    .container
+        .about.text-center
+            span.inspired Our story
+            h1 ABOUT US
+            p.text-description
+               | Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu sm od tempor
+               | incididunt ut abore et dolore mag aliqua. Ut enim ad 
+
+        //- ******************** ICONIC PICTURE ********************
+        #iconic-pic(class="row justify-content-around")
+            +iconic-pic(1)
+            .col-md-4.text-center
+            +iconic-pic(2)
+
+    //- ******************** RATING *******************
+    #rating.row
+        .mySlide.col-md-6.text-center
+            .slideshow-container
+                .slideshow-holder
+                    .quotation-mark
+                    for slideCard in slides
+                        +slide-contents(slideCard)
+                    .num-container
+                        each val in [1, 2, 3]
+                            span(class="num", onclick=`currentSlide(${val})`)= val
+        .rating-pic#cold-md-6
+
+    //- ******************** RECOMMENDATION ********************
+    .container
+        .recommendation.row.align-items-center.justify-content-center
+            .col-md-6
+                img(src="assets/images/main-img-5.jpg", alt="main-img-5")
+            #r-content.col-md-6.text-center
+                span.inspired Recommendations
+                h2 Our best specialties
+                p.text-description 
+                        |Lorem ipsum dolor sit amet, consectet adipisicing eli sed do eiu smotem por incididunt ut
+                        |abore et dolore magali qua. Ut enim ad minm eni amquis nostrud exercitation.
+
+                a.button(href='#') view all
+
+    //- ******************** MENU CONTENT ********************
+    .menu
+        .container
+            .top-title
+                span.inspired special selection
+                h1 FROM OUR MENU
+            .menu-content.row
+                //- ************************* LEFT SIDE ****************************
+                .item-inner.col-md-6
+                    .pricing-holder.d-flex.flex-column
+                        each menuItem, key in menus
+                            if(key < 5)
+                                +pricing-item(menuItem)
+                //- ************************* RIGHT SIDE ****************************
+                .item-inner.col-md-6
+                    .pricing-holder.d-flex.flex-column
+                        each menuItem, key in menus
+                            if(key >= 5)
+                                +pricing-item(menuItem)
+
+    
