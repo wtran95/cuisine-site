@@ -1,36 +1,55 @@
 - var navBar = [ { name: "HOME", subMenu: [ "Bar Home", "Restaurant Home", "Fine Dining", "Screen Showcase", "Haute Cuisine", "Restaurant Menu", "Fullscreen Showcase", "Carousel Showcase", "Landing" ] }, { name: "PAGES", subMenu: [ "About Us", "Meet The Chef", "Our Chefs", "Our Menu", "Our Kitchen", "Gallery Page", "Booking Page", "Contact Us", "Coming Soon" ] }, { name: "PORTFOLIO", subMenu: [ { name: "Portfolio Types", subMenu1: [ "Gallery Portfolio", "Standard Portfolio", "Slider Portfolio" ] }, { name: "Portfolio Layout", subMenu1: [ "Two Col.", "Three Col.", "Three Col. Wide", "Four Col.", "Four Col. Wide", "Five Col. Wide", ] }, { name: "Portfolio Single", subMenu1: [ "Small Images", "Small Slider", "Large Slider", "Large Images", "Gallery", ] }, ] }, { name: "BLOG", subMenu: [ { name: "Blog Standard" }, { name: "Blog Left Sidebar" }, { name: "Blog No Sidebar" }, { name: "Blog Classic" }, { name: "Post Types", subMenu1: [ "Standard", "Quote", "Link", "Audio", "Video", "Gallery", "No Sidebar" ] } ] }, { name: "SHOP", subMenu: [ { name: "Product List" }, { name: "Product Single" }, { name: "Shop Layouts", subMenu1: [ "Three Col.", "Four Col.", "Full Width." ] }, { name: "Shop Pages", subMenu1: [ "My Account", "Checkout", "Cart" ] } ] }, ];
+- let mobile;
 
-mixin navbar-item(navItem)
+mixin navbar-item(navItem, mobile)
     li
-        a(href='#')= navItem.name
-        ul.sub-menu
-            each subMenuItem in navItem.subMenu
-                //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
-                if(typeof(subMenuItem)!=='object')
-                    li
-                        a(href='#') #{subMenuItem}
-                else
-                    li
-                        a(href='#') #{subMenuItem.name}
-                        ul.sub-menu2
-                            if(subMenuItem.subMenu1)
-                                each subMenu1Item in subMenuItem.subMenu1
-                                    li
-                                        a(href='#') #{subMenu1Item}
+        if(!mobile)
+            a(href='#')= navItem.name
+            ul.sub-menu
+                each subMenuItem in navItem.subMenu
+                    //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
+                    if(typeof(subMenuItem)!=='object')
+                        li
+                            a(href='#') #{subMenuItem}
+                    else
+                        li
+                            a(href='#') #{subMenuItem.name}
+                            ul.sub-menu2
+                                if(subMenuItem.subMenu1)
+                                    each subMenu1Item in subMenuItem.subMenu1
+                                        li
+                                            a(href='#') #{subMenu1Item}
+        else
+            a.nav-item(href='#')= navItem.name
+            ul.sub-menu
+                each subMenuItem in navItem.subMenu
+                    //- - var url = subMenuItem.replace(/\s+/g, '-').toLowerCase();
+                    if(typeof(subMenuItem)!=='object')
+                        li
+                            a(href='#') #{subMenuItem}
+                    else
+                        li
+                            a(href='#') #{subMenuItem.name}
+                            ul.sub-menu2
+                                if(subMenuItem.subMenu1)
+                                    each subMenu1Item in subMenuItem.subMenu1
+                                        li
+                                            a(href='#') #{subMenu1Item}
 
 header.page-header
     .container
         nav
             ul.navbar#topNav
                 for navItem in navBar
-                    +navbar-item(navItem)
+                    +navbar-item(navItem, mobile = false)
 
-//- header.mobile-header
-//-     .container
-//-         #icon
-//-             a(href="javascript:void(0);", onclick="myFunction")(class="icon")
-//-         nav
-//-             ul.navbar#topMobileNav
-//-                 for navItem in navBar
-//-                     +navbar-item(navItem,- var mobile = true)
+header.mobile-header
+    .container
+        #icon
+            a.icon(href="javascript:void(0);", onclick="myFunction()")
+                i.fa.fa-bars
+        nav
+            ul.navbar#topMobileNav
+                for navItem in navBar
+                    +navbar-item(navItem, mobile = true)
         
